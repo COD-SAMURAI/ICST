@@ -1,0 +1,87 @@
+/* General reset and styling for the body */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Footer styling */
+  footer {
+    margin-top: 0px;
+      padding-top: 0px;
+    background-color: #021c2d;
+    color: #ffffff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  /* Centered content styling */
+  .footer-content {
+    text-align: center;
+  }
+  
+ /* Styling for the logo container */
+.logo-container {
+    background-color: #ffffffaf;
+    padding: 10px;
+    border-radius: 6px;
+    display: inline-block;
+  }
+  
+  /* Logo styling */
+  .logo {
+    width: 80px;
+    height: auto;
+  }
+
+  /* Hover effect on the logo container */
+    .logo-container:hover {
+        background-color: #f0f0f0; /* Lighten the background on hover */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+        transition: background-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+    }
+  
+  
+  .footer-info p {
+    margin: 5px 0;
+  }
+  
+  /* Footer bottom corners styling */
+  .footer-bottom {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Added for vertical alignment */
+    padding: 10px 20px;
+    margin-top: 20px; /* Add some space above the bottom row */
+  }
+  
+  .left-corner,
+  .right-corner {
+    font-size: 14px;
+  }
+  
+  .left-corner {
+    text-align: left;
+  }
+  
+  .right-corner {
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .left-corner,
+    .right-corner {
+      margin: 5px 0;
+    }
+  }
+  

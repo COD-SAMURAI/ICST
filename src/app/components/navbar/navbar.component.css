@@ -1,0 +1,87 @@
+/* Ensure body and html have margin and padding set to zero */
+body,
+html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Styling for the Angular Material toolbar */
+mat-toolbar.navbar {
+  backdrop-filter: blur(50px);
+  /* Gradient background */
+  padding: 15px 30px;
+  /* Increased padding for a more spacious look */
+  display: flex;
+  justify-content: space-between;
+  /* Space items evenly */
+  align-items: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for depth */
+  min-height: 80px;
+}
+
+/* Styling for Angular Material buttons */
+mat-toolbar a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 10px 20px;
+  /* Increased padding */
+  margin: 0 10px;
+  /* Increased margin */
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  /* Needed for pseudo-element positioning */
+  transition: color 0.3s ease, transform 0.3s ease;
+  border-radius: 3px;
+  letter-spacing: 1.5px;
+  /* Flex properties to align items */
+  display: flex;
+  align-items: center;
+}
+
+/* Hover effects and animations */
+mat-toolbar a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+
+}
+
+mat-toolbar a:hover::before {
+  width: 100%;
+  left: 0;
+}
+
+mat-toolbar a:hover {
+  /* Green color on hover */
+  transform: scale(1.1);
+  /* Slightly enlarged on hover */
+  border: 2px solid #ffffff27;
+  border-radius: 5px;
+}
+
+/* Responsive styling for mobile devices */
+@media (max-width: 768px) {
+  mat-toolbar {
+    flex-direction: column;
+    align-items: center;
+    /* Center items on smaller screens */
+    padding: 10px;
+    /* Adjust padding for smaller screens */
+  }
+
+  mat-toolbar a {
+    padding: 12px 10px;
+    /* Increased padding for touch devices */
+    font-size: 18px;
+  }
+}

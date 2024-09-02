@@ -1,0 +1,89 @@
+<head>
+    <!-- Other head elements -->
+  
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+
+
+<div class="container" >
+  <div class="background-image" data-aos="fade-right">
+    <img src="https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg">
+    </div>
+    <div class="welcome" data-aos="fade-left">
+    <div class="welcome-intro">
+    <div class="intro">
+        <h2>ICST 2025</h2>
+        <p>Join us for an inspiring event where industry leaders, researchers, and professionals gather to explore<br>
+            the latest advancements in sustainable technology and its impact on our world.</p>
+    </div>
+    </div>
+
+
+
+<section class="home-info" data-aos="fade-down">
+    <div class="info-cards">
+      <!-- Date Card -->
+      <div class="info-card date-card" (click)="onDateCardClick()">
+        <div class="icon">
+          <i class="fas fa-calendar-alt"></i> <!-- Date Icon -->
+        </div>
+        <div class="info-text">
+          <h3>Febraury 9-15, 2024</h3>
+          <p>Date</p>
+        </div>
+      </div>
+
+      
+
+      <!-- Venue Card -->
+      <div class="info-card venue-card" (click)="onVenueCardClick()">
+        <div class="icon">
+          <i class="fas fa-map-marker-alt"></i> <!-- Venue Icon -->
+        </div>
+        <div class="info-text">
+          <h3>The National Institute of Engineering</h3>
+          <p>Venue</p>
+        </div>
+      </div>
+  
+      <!-- Conference Approval Card -->
+      <div class="info-card conference-card">
+        <div class="icon">
+          <i class="fas fa-check-circle"></i> <!-- Conference Approval Icon -->
+        </div>
+        <div class="info-text">
+          <h3>IEEE Approved Conference</h3>
+        </div>
+      </div>
+  
+      <!-- Global Participation Card -->
+      <div class="info-card participation-card">
+        <div class="icon">
+          <i class="fas fa-globe"></i> <!-- Global Participation Icon -->
+        </div>
+        <div class="info-text">
+          <h3>Global Participation</h3>
+          <p>Researchers from Around the World</p>
+        </div>
+      </div>
+
+<!--       <div *ngIf="showCountdown$ | async">
+        <app-countdown></app-countdown>
+      </div>
+
+-->
+
+    </div>
+</section>
+</div>
+</div>
+
+
+<app-vision-mission>
+</app-vision-mission>
+
+
+
+

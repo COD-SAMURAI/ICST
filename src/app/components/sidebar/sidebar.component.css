@@ -1,0 +1,39 @@
+/* sidebar.component.css */
+.hamburger {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+    font-size: 32px;
+    color: #ffffff;
+    z-index: 1000;
+  }
+  
+  .sidebar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 140px;
+    height: auto;
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    box-shadow: 2px 0px 5px rgba(0,0,0,0.5);
+    z-index: 10000;
+  }
+  
+  .sidebar a {
+    display: block;
+    padding: 10px 0;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.1s ease; 
+    border-radius: 10px;
+  }
+  
+  .sidebar a:hover {
+    background-color: #ffb347; /* Light orange color */
+
+    color: #333; /* Change text color if needed */
+  }

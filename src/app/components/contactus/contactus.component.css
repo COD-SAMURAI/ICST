@@ -1,0 +1,64 @@
+/* contact-us.component.css */
+.contactbackground{
+    margin-top: 0px ;
+    background-color: #555;
+    width: 100%;
+    padding:10% 22%;
+    justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        min-height: 100vh;
+            /* Ensure it takes up full viewport height */
+}
+.contact-us {
+    width: 90%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-us h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #000000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.contact-us p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #000000;
+}
+
+.contact-section {
+    margin-bottom: 20px;
+}
+
+.contact-section h3 {
+    color: #000;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.contact-section p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 18px;
+}
+
+.contact-section a {
+    color: #007bff;
+    text-decoration: none;
+    display: inline-block;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.contact-section a:hover {
+    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    transform: translateY(-2px);
+}

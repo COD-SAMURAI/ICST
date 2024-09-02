@@ -1,0 +1,87 @@
+/* about-card.component.css */
+
+.about-container {
+  position: relative;
+  /* Allows positioning of child elements */
+  overflow: hidden;
+  /* Ensures no overflow outside the container */
+  margin-top: 0px;
+  height: 840px;
+  display: flex; /* Enable flexbox */
+  justify-content: center;
+  align-items: center;
+
+}
+
+.background-image {
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -5;
+  
+  /* Places the background image behind the content */
+}
+.background-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+  /* Adjust the 0.5 to make it darker or lighter */
+  z-index: 1;
+  /* Ensures the overlay is above the image */
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the entire container */
+  object-position: center;
+  /* Centers the image within the container */
+  
+}
+
+
+
+.card {
+  max-width: 1230px;
+  margin: 5px auto;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.359);
+  font-family: 'Arial', sans-serif;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+}
+
+.card-header h2 {
+  font-size: 36px;
+    margin-bottom: 40px;
+    color: #fffcfc;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.card-body p {
+    font-size: 20px;
+    line-height: 1.8;
+    text-align: left;
+    color: #fffcfc;
+}

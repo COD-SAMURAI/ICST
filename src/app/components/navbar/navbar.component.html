@@ -1,0 +1,15 @@
+<!-- Navbar with Angular Material toolbar -->
+<mat-toolbar class="navbar" *ngIf="!isSmallScreen">
+  <a mat-button routerLink="/">Home</a>
+  <a mat-button routerLink="/about">About</a>
+  <a mat-button routerLink="/committee">Committee</a>
+  <a mat-button routerLink="/callforpaper">Call For Papers</a>
+  <a mat-button href="#Awards">Awards</a>
+  <a mat-button routerLink="/register">Registration</a>
+  <a mat-button routerLink="/sponsors">Sponsors</a>
+  <a mat-button routerLink="/tracks">Tracks</a>
+  <a mat-button routerLink="/contactus">Contact Us</a>
+</mat-toolbar>
+
+<!-- Sidebar that shows up when the screen size is small -->
+<app-sidebar *ngIf="isSmallScreen"></app-sidebar>

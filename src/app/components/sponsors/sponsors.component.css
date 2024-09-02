@@ -1,0 +1,103 @@
+.sponsor-section {
+    margin-top: 40px;
+    padding: 40px 20px;
+    text-align: center;
+    
+}
+
+.background-image {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 1450px;
+    z-index: -5;
+    
+    
+    /* Places the background image behind the content */
+}
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Adjust the 0.5 to make it darker or lighter */
+    z-index: 1;
+    /* Ensures the overlay is above the image */
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire container */
+    object-position: center;
+    
+    /* Centers the image within the container */
+}
+
+.section-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.sponsor-category {
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #021c2d;
+    text-transform: uppercase;
+}
+
+.sponsor-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 200px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.card p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #333;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.gold .card {
+    border-top: 5px solid gold;
+}
+
+.silver .card {
+    border-top: 5px solid silver;
+}
+
+.standard .card {
+    border-top: 5px solid #cd7f32;
+}

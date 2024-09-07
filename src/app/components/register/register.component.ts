@@ -1,6 +1,5 @@
-import { Component, ElementRef, ViewChild, AfterViewInit, Inject, PLATFORM_ID } from '@angular/core';
-import { fromEvent, interval, merge } from 'rxjs';
-import { map, takeWhile } from 'rxjs/operators';
+import { Component, AfterViewInit, ViewChild, ElementRef, Inject, PLATFORM_ID } from '@angular/core';
+import Splide from '@splidejs/splide';
 import { isPlatformBrowser } from '@angular/common';
 
 @Component({
@@ -14,42 +13,29 @@ export class RegisterComponent implements AfterViewInit {
   @ViewChild('nextButton', { static: true }) nextButton!: ElementRef<HTMLButtonElement>;
   @ViewChild('categoriesContainer', { static: true }) categoriesContainer!: ElementRef<HTMLDivElement>;
 
-  currentIndex = 0;
-  maxIndex = 0;
-
   constructor(@Inject(PLATFORM_ID) private platformId: object) {}
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      const activators = Array.from(this.categoriesContainer.nativeElement.querySelectorAll('.carousel__activator'));
+      const splide = new Splide(this.categoriesContainer.nativeElement, {
+        type       : 'loop',
+        perPage    : 3,
+        focus      : 'center',
+        gap        : '1rem',
+        pagination : false,
+        arrows     : true,
+        breakpoints: {
+          768: {
+            perPage: 1,
+          },
+        },
+      });
 
-      this.maxIndex = activators.length - 1;
+      splide.mount();
 
-      const prevClick$ = fromEvent(this.prevButton.nativeElement, 'click').pipe(
-        map(() => -1)
-      );
-
-      const nextClick$ = fromEvent(this.nextButton.nativeElement, 'click').pipe(
-        map(() => 1)
-      );
-
-      const autoSlide$ = interval(5000).pipe(
-        map(() => 1)
-      );
-
-      // Merging manual clicks with auto slide
-      merge(prevClick$, nextClick$, autoSlide$)
-        .pipe(
-          takeWhile(() => activators.length > 0) // Only slide if there are activators
-        )
-        .subscribe((direction: number) => {
-          this.currentIndex = (this.currentIndex + direction + activators.length) % activators.length;
-          this.updateTransform();
-        });
+      // Custom controls
+      this.prevButton.nativeElement.addEventListener('click', () => splide.go('<'));
+      this.nextButton.nativeElement.addEventListener('click', () => splide.go('>'));
     }
-  }
-
-  updateTransform() {
-    this.categoriesContainer.nativeElement.style.transform = `translateX(-${this.currentIndex * 100}%)`;
   }
 }

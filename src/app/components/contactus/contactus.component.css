@@ -1,29 +1,72 @@
 /* contact-us.component.css */
-.contactbackground{
-    margin-top: 0px ;
-    background-color: #555;
-    width: 100%;
-    padding:10% 22%;
+
+.contactbackground {
+    margin-top: 0px;
+    padding: 10% 22%;
+    display: flex;
     justify-content: center;
-        /* Center horizontally */
-        align-items: center;
-        /* Center vertically */
-        min-height: 100vh;
-            /* Ensure it takes up full viewport height */
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    /* Ensure it takes up full viewport height */
 }
+
+.background-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 210vh;
+    z-index: -5;
+    /* Places the background image behind the content */
+}
+
+.background-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures the image covers the entire container */
+    object-position: center;
+    /* Centers the image within the container */
+}
+
+.background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    /* Adjust the RGBA value for lighter darkness */
+    /* Places the overlay above the image but below the content */
+}
+
 .contact-us {
     width: 90%;
-    max-width: 800px;
+    max-width: 1200px;
+    /* Adjusted from 100vh to a more suitable width */
     padding: 20px;
-    background-color: #ffffff;
+    backdrop-filter: blur(10px);
+    /* Reduced blur for a clearer effect */
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    /* Increased shadow for more contrast */
+    backdrop-filter: blur(40px);
+    /* Added a white background with slight transparency */
+}
+
+.line {
+    width: 2px;
+    background-color: #ccc;
+    height: 100%;
 }
 
 .contact-us h2 {
     font-size: 36px;
     margin-bottom: 30px;
-    color: #000000;
+    color: #ffffff;
+    /* Darker text color for better contrast */
     text-transform: uppercase;
     letter-spacing: 2px;
     text-align: center;
@@ -32,7 +75,8 @@
 .contact-us p {
     font-size: 18px;
     margin-bottom: 30px;
-    color: #000000;
+    color: #ffffff;
+    /* Darker text color for better contrast */
 }
 
 .contact-section {
@@ -40,25 +84,29 @@
 }
 
 .contact-section h3 {
-    color: #000;
+    color: #ffffff;
+    /* Darker color for better readability */
     margin-bottom: 10px;
     font-size: 25px;
 }
 
 .contact-section p {
     margin: 5px 0;
-    color: #555;
+    color: #bbbbbb;
+    /* Slightly lighter color for better contrast */
     font-size: 18px;
 }
 
 .contact-section a {
-    color: #007bff;
+    color: #0056b3;
+    /* Slightly darker blue for better readability */
     text-decoration: none;
     display: inline-block;
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .contact-section a:hover {
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.3);
+    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
+    /* Slightly lighter shadow for hover effect */
     transform: translateY(-2px);
 }

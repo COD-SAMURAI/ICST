@@ -8,7 +8,8 @@ import { CallforpaperComponent } from './components/callforpaper/callforpaper.co
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutComponent } from './components/about/about.component';
 export const routes: Routes = [
-  { path: 'home', component: HomeComponent , title : "Home page"},
+  
+  { path: 'home', component: HomeComponent , title : "Home page" },
   { path : '', redirectTo: '/home', pathMatch: 'full'},
   { path : 'about' , component: AboutComponent ,title : " About"},
   { path: 'callforpaper' , component: CallforpaperComponent , title : " Call for paper"},

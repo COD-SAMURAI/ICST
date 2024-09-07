@@ -13,7 +13,13 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import * as AOS from 'aos';
 
 import { environment } from '../environments/environment';
+import { trigger, transition, style, animate } from '@angular/animations';
 //fetch(environment.apiUrl);
+
+
+import { NgxSpinnerService } from 'ngx-spinner';
+import { NgxSpinnerModule } from 'ngx-spinner';
+
 
 @Component({
   selector: 'app-root',
@@ -30,12 +36,25 @@ import { environment } from '../environments/environment';
     RouterLink,
     RouterOutlet,
     MatToolbarModule,
+    NgxSpinnerModule
   ],
   templateUrl: 'app.component.html',
-  styleUrls: ['app.component.css']
+  styleUrls: ['app.component.css'],
+  animations: [
+    trigger('routeAnimations', [
+      transition('* <=> *', [
+        style({ opacity: 0 }),
+        animate('300ms', style({ opacity: 1 }))
+      ])
+    ])
+  ]
 })
 export class AppComponent {
-   constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+  constructor(
+              @Inject(PLATFORM_ID) private platformId: Object , 
+              private spinner: NgxSpinnerService
+            ) {}
+
   title = 'ICST';
   ngOnInit()
   {
@@ -45,4 +64,16 @@ export class AppComponent {
     });
     }
   }
+  prepareRoute(outlet: any) {
+    return outlet?.activatedRouteData?.['animation'];
+  }
+  showSpinner() {
+    this.spinner.show();
+
+    // Hide the spinner after some time
+    setTimeout(() => {
+      this.spinner.hide();
+    }, 3000); // Change the duration as needed
+  }
+  
 }

@@ -1,21 +1,31 @@
 .sponsor-section {
-    margin-top: 40px;
-    padding: 40px 20px;
+
+    position: relative;
     text-align: center;
+    display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        flex-direction: column;
+        padding-bottom: 20px;
     
 }
 
 .background-image {
-    position: absolute;
+    position: sticky;
     top: 0px;
     left: 0px;
-    width: 100%;
-    height: 1450px;
+    width: 100vw;
+    height: 100vh;
     z-index: -5;
     
     
     /* Places the background image behind the content */
 }
+
+
+
 .background-image::before {
     content: "";
     position: absolute;
@@ -23,7 +33,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.3);
     /* Adjust the 0.5 to make it darker or lighter */
     z-index: 1;
     /* Ensures the overlay is above the image */
@@ -39,9 +49,27 @@
     /* Centers the image within the container */
 }
 
+
+.sponsor-cover {
+
+    border: 0.4px solid white;
+    display: flex;
+        justify-content: center;
+        /* Center horizontally */
+        align-items: center;
+        /* Center vertically */
+        flex-direction: column;
+        /* Stack items vertically */
+        width: 80%;
+            height: 100%;
+        backdrop-filter: blur(30px);
+        border-radius: 5px;
+}
+
+
+
 .section-title {
     font-size: 36px;
-    margin-bottom: 30px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
@@ -54,7 +82,7 @@
 .category-title {
     font-size: 28px;
     margin-bottom: 20px;
-    color: #021c2d;
+    color: #bdbfc1;
     text-transform: uppercase;
 }
 

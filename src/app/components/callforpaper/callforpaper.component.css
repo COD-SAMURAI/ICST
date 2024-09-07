@@ -45,13 +45,13 @@
     text-align: center;
     font-size: 36px;
     margin-bottom: 40px;
-    color: #000000;
+    color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
   }
   
   .content-card p {
-    color: #333;
+    color: #ffffff;
     font-size: 18px;
     line-height: 1.6;
     margin-bottom: 15px;
@@ -69,7 +69,7 @@
   
   .submit-btn, .download-btn {
     display: inline-block;
-    background-color: #006400;
+    background-color: #004364;
     color: #ffffff;
     padding: 12px 20px;
     text-align: center;

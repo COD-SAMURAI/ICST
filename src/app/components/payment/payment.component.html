@@ -1,0 +1,56 @@
+<div class="payment-cover">
+    <mat-card class="payment-card">
+        <mat-card-title class="payment-title">Payment</mat-card-title>
+        <mat-card-content>
+            <form [formGroup]="paymentForm" (ngSubmit)="processPayment()" class="payment-form">
+                <p>
+                    <mat-form-field class="payment-form-field">
+                        <input type="text" matInput placeholder="Name" formControlName="name" class="payment-input">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="payment-form-field">
+                        <input type="email" matInput placeholder="Email" formControlName="email" class="payment-input">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="payment-form-field">
+                        <input type="tel" matInput placeholder="Phone Number" formControlName="phoneNumber"
+                            class="payment-input">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="payment-form-field">
+                        <input type="text" matInput placeholder="Paper ID" formControlName="paperId"
+                            class="payment-input">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="payment-form-field">
+                        <input type="text" matInput placeholder="Transaction ID" formControlName="transactionId"
+                            class="payment-input">
+                    </mat-form-field>
+                </p>
+
+                <p>
+                    <mat-form-field class="payment-form-field">
+                        <input type="number" matInput placeholder="Number of Accompaniers (excluding yourself)"
+                            formControlName="accompaniers" min="0" class="payment-input">
+                    </mat-form-field>
+                </p>
+
+                <p *ngIf="error" class="payment-error">
+                    {{ error }}
+                </p>
+
+                <div class="button">
+                    <button type="submit" mat-button class="payment-button">Submit Payment</button>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>

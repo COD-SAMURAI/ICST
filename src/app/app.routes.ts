@@ -7,6 +7,7 @@ import { CommitteeComponent } from './components/committee/committee.component';
 import { CallforpaperComponent } from './components/callforpaper/callforpaper.component'
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutComponent } from './components/about/about.component';
+import { PaymentComponent } from './components/payment/payment.component';
 export const routes: Routes = [
   
   { path: 'home', component: HomeComponent , title : "Home page" },
@@ -18,5 +19,6 @@ export const routes: Routes = [
   { path: 'tracks',component: TracksComponent ,title : "Tracks Page"},
   { path: 'committee',component: CommitteeComponent ,title : "Committee page"},
   { path: 'contactus' , component: ContactusComponent , title : "Contact us"},
+  { path: 'payment' , component: PaymentComponent , title : "Payment "},
 ];
 

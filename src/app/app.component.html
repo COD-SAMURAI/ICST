@@ -1,7 +1,12 @@
-<app-navbar ></app-navbar>
-<ngx-spinner></ngx-spinner>
+<app-navbar></app-navbar>
 
-    <router-outlet data-aos="flip-left"></router-outlet>
+<!-- Ngx Spinner -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="ball-scale-multiple" [fullScreen]="true">
+</ngx-spinner>
+
+<!-- Router Outlet -->
+
+    <router-outlet></router-outlet>
 
 
 <app-footer></app-footer>

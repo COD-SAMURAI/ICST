@@ -1,136 +1,220 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
+
 .container {
-  margin-bottom: -9px;
+  margin-bottom: -0.5rem;
+  /* Adjusted for relative spacing */
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #0770ad00;
-  height:100vh;
+  background-color: rgba(7, 112, 173, 0);
+  /* Transparent background */
+  height: 101vh;
+  /* Covers 101% of the viewport height */
+  margin-top: 2.5vh;
+  /* Margin from the top */
 }
-
 
 .background-image {
   position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  height: 100%;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  /* Full viewport width */
+  height: 110vh;
+  /* Extends beyond viewport height */
   z-index: -5;
-  /* Places the background image behind the content */
+  /* Behind the content */
 }
 
 .background-image img {
   width: 100%;
+  /* Full width */
   height: 100%;
+  /* Full height */
   object-fit: cover;
-  /* Ensures the image covers the entire container */
+  /* Cover the entire container */
   object-position: center;
-  /* Centers the image within the container */
+  /* Center the image */
 }
 
 .welcome {
-  margin-top: 10px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  /* 
-  background-color: #bff5d10d; 
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  */
+  margin: 0;
+  /* Reset margins */
+  border-radius: 1rem;
+  /* Rounded corners */
   padding: 5rem;
-  max-width: 1200px;
-  width: 100%;
+  /* Padding around content */
+  max-width: 100%;
+  /* Full width */
   text-align: center;
-
+  /* Center text */
 }
 
 .welcome h2 {
   font-size: 3rem;
+  /* Size for the heading */
   color: #ffffff;
+  /* Text color */
   margin-bottom: 1rem;
+  /* Space below heading */
 }
 
 .welcome p {
   font-size: 1.1rem;
+  /* Size for paragraph */
   color: #ffffff;
+  /* Text color */
   line-height: 1.6;
+  /* Line height for readability */
 }
 
 .welcome-intro {
-  border : 0.4px solid white;
-  padding: 10px;
-
+  border: 0.4px solid white;
+  /* Border color */
+  padding: 1rem;
+  /* Padding inside the intro box */
+  margin-top: 5vh;
+  /* Space from the top */
   backdrop-filter: blur(30px);
-  border-radius: 5px;
+  /* Blurring effect */
+  border-radius: 0.5rem;
+  /* Rounded corners */
 }
 
 .intro p {
   font-size: 1.6rem;
-
+  /* Font size for intro paragraph */
 }
 
+.intro h2 {
+  font-family: 'Roboto Condensed', sans-serif;
+  /* Font style */
+  font-size: 4rem;
+  /* Large size for cinematic effect */
+  color: transparent;
+  /* Transparent text */
+  -webkit-text-stroke: 0.2rem white;
+  /* White outline */
+  text-transform: uppercase;
+  /* Uppercase letters */
+  letter-spacing: 1rem;
+  /* Spacing between letters */
+  text-align: center;
+  /* Center the text */
+  padding: 1rem;
+  /* Padding around text */
+  margin: 0;
+  /* Reset margins */
+  line-height: 1.2;
+  /* Line height */
+}
 
 .home-info {
+  margin-top: 3vh;
+  /* Space from the top */
   padding: 1rem;
+  /* Padding inside */
   display: flex;
+  /* Flex container */
   justify-content: center;
+  /* Center items */
   flex-wrap: wrap;
+  /* Allow wrapping */
 }
 
 .info-cards {
   display: flex;
+  /* Flex container */
   justify-content: space-around;
+  /* Space around items */
   flex-wrap: wrap;
+  /* Allow wrapping */
   cursor: pointer;
+  /* Pointer on hover */
 }
 
 .info-card {
   border: 0.4px solid white;
+  /* Border color */
   backdrop-filter: blur(30px);
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* Blurring effect */
+  border-radius: 0.625rem;
+  /* Rounded corners */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
   padding: 0.5rem;
+  /* Padding inside card */
   margin: 1rem;
-  width: 210px;
+  /* Margin around card */
+  width: 13rem;
+  /* Fixed width for cards */
   text-align: center;
+  /* Center text inside card */
   transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Smooth transition */
 }
 
 .info-card:hover {
   backdrop-filter: blur(50px);
-  transform: translateY(-5px);
+  /* Stronger blur on hover */
+  transform: translateY(-0.5rem);
+  /* Lift effect on hover */
 }
 
 .info-card .icon {
   font-size: 2rem;
+  /* Size for icon */
   color: #ffffff;
+  /* Icon color */
   margin-bottom: 0.5rem;
+  /* Space below icon */
+  padding-top: 1rem;
+  /* Space above icon */
 }
 
 .info-card h3 {
   margin: 0.5rem 0;
+  /* Space around heading */
   font-size: 1.2rem;
+  /* Size for card heading */
   color: #ffffff;
+  /* Heading color */
 }
 
 .info-card p {
   margin: 0;
+  /* Reset margins */
   color: #ffffff;
+  /* Text color */
+}
+
+.app-countdown {
+  margin-top: 20vh;
+  /* Space from the top */
 }
 
 
 /* Mobile Styles */
 @media (max-width: 768px) {
+
+  .cover {
+    margin-top: 0vh;
+    margin-bottom: 30vh;
+    
+  }
   .container {
     padding: 1rem;
     margin-bottom: 0px;
   }
+    
 
     .background-image {
       position: absolute;
       top: 0px;
       left: 0px;
-      width: 100%;
-      height: 150%;
-      z-index: -5;
+      width: 100vw;
+      height: 110vh;
+      z-index: -3;
       /* Places the background image behind the content */
     }
 
@@ -158,15 +242,19 @@
 
   .home-info {
     padding: 1rem;
+    display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
   }
 
   .info-cards {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
   }
 
   .info-card {
-    width: 90%;
+    width: 30%;
     margin: 1rem 0;
     padding: 0.5rem;
   }
@@ -176,11 +264,31 @@
   }
 
   .info-card h3 {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 
   .info-card p {
-    font-size: 0.9rem;
+    font-size: 0.5rem;
   }
+        .intro h2 {
+          font-family: 'Roboto Condensed', sans-serif;
+          /* Use a bold, condensed font similar to Interstellar */
+          font-size: 7vw;
+          /* Large text size for a cinematic effect */
+          color: transparent;
+          /* Make the text transparent */
+          -webkit-text-stroke: 0.7px white;
+          /* White outline */
+          text-transform: uppercase;
+          /* Make the text uppercase for a bold title effect */
+          letter-spacing: 10px;
+          /* Space out the letters */
+          text-align: center;
+          /* Center the text */
+          padding: 5px;
+          margin: 0;
+          line-height: 0.6;
+          /* Adjust line-height for better spacing */
+        }
 
 }

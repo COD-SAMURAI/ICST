@@ -42,16 +42,26 @@
     font-size: 36px;
     margin-bottom: 30px;
     color: #ffffff;
+    display: flex;
+        /* Make the section a flex container */
+        flex-wrap: wrap;
+        /* Allow wrapping to new lines if needed */
+        justify-content: space-evenly;
+        /* Space cards evenly */
+        gap: 20px;
+        /* Optional: Add space between cards */
 }
 
 .track-card {
+    flex: 1 1 30%;
+        /* Allow the card to take up 30% of the width, with flexibility to shrink or grow */
     backdrop-filter: blur(40px);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.628);
     padding: 20px;
     margin: 20px auto;
-    max-width: 800px;
-    height: 80vh;
+    max-width: 450px;
+    height: min-content;
     text-align: left;
     transition: transform 0.3s ease;
 }
@@ -104,4 +114,85 @@
 
 .track-card:hover {
     transform: translateY(-10px);
+}
+
+
+@media only screen and (max-width: 767px) {
+    .tracks-section {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .background-image {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        z-index: -5;
+        overflow: hidden;
+    }
+
+    .background-image::before {
+        background: rgba(0, 0, 0, 0.8);
+        /* Adjust if needed */
+        z-index: 1;
+    }
+
+    .tracks-section h1 {
+        font-size: 28px;
+        margin-bottom: 20px;
+        letter-spacing: 1px;
+    }
+
+    .section-title {
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+
+    .track-card {
+        padding: 15px;
+        margin: 15px auto;
+        max-width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.6);
+        transition: transform 0.3s ease;
+    }
+
+    .track-title {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+
+    .track-themes {
+        padding-left: 15px;
+        font-size: 16px;
+    }
+
+    .track-themes li {
+        margin-bottom: 8px;
+    }
+
+    .track-info h3 {
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .track-info p {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+
+    .track-info ul {
+        padding-left: 15px;
+        font-size: 16px;
+    }
+
+    .track-info ul li {
+        margin-bottom: 8px;
+    }
+
+    .track-card:hover {
+        transform: translateY(-8px);
+    }
 }

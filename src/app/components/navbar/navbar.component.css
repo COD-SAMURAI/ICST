@@ -23,6 +23,7 @@ mat-toolbar.navbar {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   /* Subtle shadow for depth */
   min-height: 80px;
+  flex-wrap: wrap;
 }
 
 /* Styling for Angular Material buttons */
@@ -33,7 +34,7 @@ mat-toolbar a {
   /* Increased padding */
   margin: 0 10px;
   /* Increased margin */
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
   position: relative;
   /* Needed for pseudo-element positioning */
@@ -43,6 +44,7 @@ mat-toolbar a {
   /* Flex properties to align items */
   display: flex;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 /* Hover effects and animations */
@@ -70,9 +72,10 @@ mat-toolbar a:hover {
 }
 
 /* Responsive styling for mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 1080px) {
   mat-toolbar {
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
     /* Center items on smaller screens */
     padding: 10px;
@@ -82,6 +85,6 @@ mat-toolbar a:hover {
   mat-toolbar a {
     padding: 12px 10px;
     /* Increased padding for touch devices */
-    font-size: 18px;
+    font-size: 10px;
   }
 }

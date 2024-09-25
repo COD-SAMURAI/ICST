@@ -11,8 +11,8 @@ export class HomeService {
     const title = encodeURIComponent('ICST Conclave 2025');
     const location = encodeURIComponent('The National Institute of Engineering, Mysuru, Karnataka, India');
     const details = encodeURIComponent('Join us for an inspiring event on sustainable technology.');
-    const startDate = '20250213T050000Z'; // YYYYMMDDTHHMMSSZ format
-    const endDate = '20250214T123000Z'; // YYYYMMDDTHHMMSSZ format
+    const startDate = '20250219T050000Z'; // YYYYMMDDTHHMMSSZ format
+    const endDate = '20250220T123000Z'; // YYYYMMDDTHHMMSSZ format
 
     const calendarUrl = `https://www.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=${startDate}/${endDate}&details=${details}&location=${location}`;
 

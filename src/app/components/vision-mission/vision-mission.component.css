@@ -1,129 +1,155 @@
-body{
-    font-family: 'Arial',sans-serif;
+body {
+    font-family: 'Arial', sans-serif;
 }
-
 
 .vision-mission-container {
     position: relative;
     /* Allows positioning of child elements */
-    /* Ensures no overflow outside the container */
     overflow: hidden;
+    /* Ensures no overflow outside the container */
     height: 120vh;
+    /* Set a height for the container */
     color: #000000;
-
-
+    /* Text color */
 }
 
 .background-image {
     position: absolute;
     width: 100%;
+    /* Full width of the container */
     height: 100%;
+    /* Full height of the container */
     z-index: -5;
     /* Places the background image behind the content */
 }
 
 .background-image img {
     width: 120%;
+    /* Slightly wider for coverage */
     height: 100%;
+    /* Full height */
     object-fit: cover;
-    /* Ensures the image covers the entire container */
+    /* Ensure the image covers the container */
     object-position: center;
-    /* Centers the image within the container */
+    /* Center the image */
 }
-
-
 
 .vision-mission {
     display: flex;
+    /* Flexbox layout */
     justify-content: space-around;
-    margin: 60px 0px;
+    /* Space between items */
+    margin: 6rem 0;
+    /* Space above and below */
     position: relative;
+    /* Relative positioning for child elements */
 }
-
 
 .vision-mission .info-card {
     width: 85%;
-    margin-right: 500px;
-    margin-left: 50px;
-    background-color: #f9f9f958;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Card width */
+    margin: 0 50px;
+    /* Horizontal margins */
+    background-color: rgba(249, 249, 249, 0.493);
+    /* Semi-transparent background */
+    border-radius: 1rem;
+    /* Rounded corners */
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    /* Subtle shadow */
     padding: 1rem;
+    /* Padding inside card */
 }
 
-
-
 .vision-mission .info-text h3 {
-        font-size: 36px;
-        margin-bottom: 40px;
-        color: #000000;
-        text-transform: uppercase;
-        letter-spacing: 2px;
+    font-size: 2.25rem;
+    /* Heading size */
+    margin-bottom: 2.5rem;
+    /* Space below heading */
+    color: #000000;
+    /* Heading color */
+    text-transform: uppercase;
+    /* Uppercase letters */
+    letter-spacing: 0.125rem;
+    /* Space between letters */
 }
 
 .vision-mission .info-text p,
 .vision-mission li {
-    font-size: 20px;
+    font-size: 1.25rem;
+    /* Font size for paragraph and list items */
     line-height: 1.8;
+    /* Line height for readability */
     text-align: left;
+    /* Left align text */
 }
 
 @media (max-width: 768px) {
     .vision-mission-container {
-        margin-top:0px;
+        margin-top: 10vh;
+        /* Margin from the top */
         height: auto;
-        /* Adjust height for mobile */
-        padding: 10px;
-        /* Add padding to container */
+        /* Auto height for mobile */
+        padding: 1rem;
+        /* Padding for the container */
     }
 
-        .background-image {
-            top: 0px;
-            left: 0px;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-            z-index: -5;
-            /* Places the background image behind the content */
-        }
+    .background-image {
+        top: 0;
+        /* Position at the top */
+        left: 0;
+        /* Position at the left */
+        position: fixed;
+        /* Fixed position for mobile */
+        width: 100vw;
+        /* Full viewport width */
+        height: 100vh;
+        /* Full viewport height */
+        z-index: -5;
+        /* Behind content */
+    }
 
     .background-image img {
         width: 100%;
+        /* Full width */
         height: 100%;
-        /* Maintain aspect ratio */
+        /* Full height */
+        object-fit: cover;
+        /* Cover the container */
     }
 
     .vision-mission {
         flex-direction: column;
         /* Stack items vertically */
         align-items: center;
-        /* Center align content */
-        margin: 20px 0;
+        /* Center align items */
+        margin: 2rem 0;
+        /* Reduced margins */
     }
 
     .vision-mission .info-card {
         width: 90%;
-        /* Adjust width for mobile */
-        margin: 10px 0;
-        /* Reduce margin */
+        /* Card width for mobile */
+        margin: 1rem 0;
+        /* Vertical margins */
         padding: 0.5rem;
-        /* Reduce padding */
+        background-color: rgba(249, 249, 249, 0.559);
+        /* Reduced padding */
         box-shadow: none;
         /* Optional: remove shadow for mobile */
     }
 
     .vision-mission .info-text h3 {
-        font-size: 24px;
+        font-size: 1.5rem;
         /* Decrease font size */
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
         /* Reduce margin */
     }
 
     .vision-mission .info-text p,
     .vision-mission li {
-        font-size: 16px;
+        font-size: 1rem;
         /* Decrease font size */
         text-align: left;
-        /* Center align text */
+        /* Left align text */
     }
 }

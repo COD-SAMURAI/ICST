@@ -3,41 +3,26 @@
     position: relative;
     text-align: center;
     display: flex;
-        justify-content: center;
-        /* Center horizontally */
-        align-items: center;
-        /* Center vertically */
-        flex-direction: column;
-        padding-bottom: 20px;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+    flex-direction: column;
     
 }
 
 .background-image {
-    position: sticky;
+    position: absolute;
     top: 0px;
     left: 0px;
     width: 100vw;
-    height: 100vh;
+    height: 120vh;
     z-index: -5;
     
     
     /* Places the background image behind the content */
 }
 
-
-
-.background-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.3);
-    /* Adjust the 0.5 to make it darker or lighter */
-    z-index: 1;
-    /* Ensures the overlay is above the image */
-}
 
 .background-image img {
     width: 100%;
@@ -50,10 +35,12 @@
 }
 
 
+
 .sponsor-cover {
 
     border: 0.4px solid white;
     display: flex;
+
         justify-content: center;
         /* Center horizontally */
         align-items: center;
@@ -64,15 +51,26 @@
             height: 100%;
         backdrop-filter: blur(30px);
         border-radius: 5px;
+        margin-top: 10vh;
+        margin-bottom: 0vh;
+        padding-bottom: 5vh;
 }
 
-
+.sponsor-cover hr {
+    border: none;
+    /* Remove default border */
+    height: 2px;
+    /* Set the height of the hr */
+    background-color: #ffffff;
+    /* Set the color of the hr */
+}
 
 .section-title {
     font-size: 36px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 300;
 }
 
 .sponsor-category {

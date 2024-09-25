@@ -7,10 +7,12 @@ body {
     /* Allows positioning of child elements */
     overflow: hidden;
     /* Ensures no overflow outside the container */
-    height: 120vh;
+    height: 130vh;
     /* Set a height for the container */
     color: #000000;
     /* Text color */
+    padding-bottom: 5vh;
+    
 }
 
 .background-image {
@@ -37,20 +39,29 @@ body {
 .vision-mission {
     display: flex;
     /* Flexbox layout */
-    justify-content: space-around;
+    justify-content: left;
     /* Space between items */
-    margin: 6rem 0;
+    margin: 2rem 0;
     /* Space above and below */
     position: relative;
     /* Relative positioning for child elements */
+
+}
+hr {
+    border: none;
+    /* Remove default border */
+    height: 2px;
+    /* Set the height of the hr */
+    background-color: #000000;
+    /* Set the color of the hr */
 }
 
 .vision-mission .info-card {
-    width: 85%;
+    width: 65%;
     /* Card width */
-    margin: 0 50px;
+    margin: 0 30px;
     /* Horizontal margins */
-    background-color: rgba(249, 249, 249, 0.493);
+    background-color: rgba(249, 249, 249, 0.64);
     /* Semi-transparent background */
     border-radius: 1rem;
     /* Rounded corners */
@@ -63,14 +74,15 @@ body {
 .vision-mission .info-text h3 {
     font-size: 2.25rem;
     /* Heading size */
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
     /* Space below heading */
     color: #000000;
     /* Heading color */
     text-transform: uppercase;
     /* Uppercase letters */
-    letter-spacing: 0.125rem;
+    letter-spacing: 1px;
     /* Space between letters */
+    font-weight: 300;
 }
 
 .vision-mission .info-text p,
@@ -81,6 +93,8 @@ body {
     /* Line height for readability */
     text-align: left;
     /* Left align text */
+    letter-spacing: 1px;
+    font-weight: 300;
 }
 
 @media (max-width: 768px) {

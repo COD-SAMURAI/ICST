@@ -2,18 +2,16 @@
     padding: 40px 20px;
     text-align: center;
     margin-top: 30px;
-
 }
 
 .background-image {
     position: fixed;
-    top: 0px;
+    top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     z-index: -5;
     overflow: hidden;
-
     /* Places the background image behind the content */
 }
 
@@ -25,52 +23,53 @@
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8);
-    /* Adjust the 0.5 to make it darker or lighter */
+    /* Adjust to make it darker or lighter */
     z-index: 1;
     /* Ensures the overlay is above the image */
 }
 
-.tracks-section h1{
+.tracks-section h1 {
     font-size: 36px;
     margin-bottom: 30px;
     color: #ffffff;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 300;
 }
 
 .section-title {
     font-size: 36px;
     margin-bottom: 30px;
     color: #ffffff;
-    display: flex;
-        /* Make the section a flex container */
-        flex-wrap: wrap;
-        /* Allow wrapping to new lines if needed */
-        justify-content: space-evenly;
-        /* Space cards evenly */
-        gap: 20px;
-        /* Optional: Add space between cards */
+}
+
+.track-cards-container {
+    display: grid;
+    /* Change to grid layout */
+    grid-template-columns: repeat(3, 1fr);
+        /* Three columns */
+    /* Responsive grid columns */
+    gap: 20px;
+    /* Space between cards */
+    justify-items: center;
+    /* Center align items */
 }
 
 .track-card {
-    flex: 1 1 30%;
-        /* Allow the card to take up 30% of the width, with flexibility to shrink or grow */
     backdrop-filter: blur(40px);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(255, 255, 255, 0.628);
     padding: 20px;
-    margin: 20px auto;
-    max-width: 450px;
-    height: min-content;
     text-align: left;
     transition: transform 0.3s ease;
 }
 
 .track-title {
-    font-size: 28px;
+    font-size: 25px;
     margin-bottom: 15px;
     color: #ffffff;
     text-transform: uppercase;
+    font-weight: 300;
 }
 
 .track-themes {
@@ -78,44 +77,16 @@
     padding-left: 20px;
     font-size: 18px;
     color: #ffffff;
+    font-weight: 300;
 }
 
 .track-themes li {
     margin-bottom: 10px;
 }
 
-.track-info {
-    margin-top: 20px;
-}
-
-.track-info h3 {
-    font-size: 22px;
-    color: #ffffff;
-    margin-bottom: 10px;
-}
-
-.track-info p {
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.track-info ul {
-    list-style-type: circle;
-    padding-left: 20px;
-    font-size: 18px;
-    color: #ffffff;
-}
-
-.track-info ul li {
-    margin-bottom: 10px;
-}
-
 .track-card:hover {
     transform: translateY(-10px);
 }
-
 
 @media only screen and (max-width: 767px) {
     .tracks-section {

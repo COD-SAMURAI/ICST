@@ -1,90 +1,64 @@
-/* Ensure body and html have margin and padding set to zero */
-body,
-html {
-  margin: 0;
-  padding: 0;
-  font-family: 'Roboto', sans-serif;
-}
-
-/* Styling for the Angular Material toolbar */
+/* Styling for the Angular Material toolbar on laptops */
 mat-toolbar.navbar {
-  backdrop-filter: blur(50px);
-  /* Gradient background */
-  padding: 15px 30px;
-  /* Increased padding for a more spacious look */
-  display: flex;
+  backdrop-filter: blur(40px);
+  /* Slightly reduced blur */
+  padding: 8px 8px;
+  /* Reduced padding */
   justify-content: space-between;
-  /* Space items evenly */
+  /* Keep space between items */
   align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  /* Subtle shadow for depth */
-  min-height: 80px;
-  flex-wrap: wrap;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  /* Reduced shadow for a sleeker look */
+  min-height: 60px;
+  /* Reduced height */
 }
 
-/* Styling for Angular Material buttons */
+/* Adjusted styling for Angular Material buttons */
 mat-toolbar a {
   color: #ffffff;
   text-decoration: none;
-  padding: 10px 20px;
-  /* Increased padding */
-  margin: 0 10px;
-  /* Increased margin */
-  font-size: 25px;
-  font-weight: 500;
+  padding: 5px 5px;
+  /* Reduced padding */
+  margin: 0 8px;
+  /* Reduced margin */
+  font-size: 22px;
+  font-weight: 300;
+  /* Smaller font size for laptops */
+  font-weight: 300;
   position: relative;
-  /* Needed for pseudo-element positioning */
-  transition: color 0.3s ease, transform 0.3s ease;
+  transition: color 0.2s ease, transform 0.2s ease;
   border-radius: 3px;
-  letter-spacing: 1.5px;
-  /* Flex properties to align items */
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  letter-spacing: 1px;
+  /* Slightly reduced spacing */
+  display: inline-block;
+  /* Keep items on the same row */
 }
 
-/* Hover effects and animations */
-mat-toolbar a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 3px;
-
-}
-
-mat-toolbar a:hover::before {
-  width: 100%;
-  left: 0;
-}
-
+/* Hover effects for laptop size */
 mat-toolbar a:hover {
-  /* Green color on hover */
-  transform: scale(1.1);
-  /* Slightly enlarged on hover */
-  border: 2px solid #ffffff27;
-  border-radius: 5px;
+  transform: scale(1.05);
+  /* Slightly smaller hover effect */
+  border: 2px solid #ffffff33;
+  border-radius: 3px;
 }
 
-/* Responsive styling for mobile devices */
-@media (max-width: 1080px) {
-  mat-toolbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* Center items on smaller screens */
-    padding: 10px;
-    /* Adjust padding for smaller screens */
+/* Responsive styling for medium laptop screens */
+@media (max-width: 1440px) {
+  mat-toolbar.navbar {
+    padding: 8px 15px;
+    /* Adjusted padding for medium screens */
+    min-height: 50px;
+    /* Reduced height */
   }
 
   mat-toolbar a {
-    padding: 12px 10px;
-    /* Increased padding for touch devices */
-    font-size: 10px;
+    padding: 6px 6px;
+    margin: 0 5px;
+    font-size: 16px;
+    /* Adjusted font size */
   }
 }

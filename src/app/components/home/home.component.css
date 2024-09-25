@@ -1,26 +1,29 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap');
 
+
+
+.cover{
+  justify-content:flex-start;
+
+}
 .container {
-  margin-bottom: -0.5rem;
   /* Adjusted for relative spacing */
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(7, 112, 173, 0);
   /* Transparent background */
-  height: 101vh;
-  /* Covers 101% of the viewport height */
-  margin-top: 2.5vh;
+  height: 120vh;
   /* Margin from the top */
+  position:relative;
 }
 
 .background-image {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   /* Full viewport width */
-  height: 110vh;
+  height: 140vh;
   /* Extends beyond viewport height */
   z-index: -5;
   /* Behind the content */
@@ -38,16 +41,18 @@
 }
 
 .welcome {
-  margin: 0;
   /* Reset margins */
   border-radius: 1rem;
   /* Rounded corners */
   padding: 5rem;
+  padding-top: 10vh;
   /* Padding around content */
   max-width: 100%;
   /* Full width */
   text-align: center;
   /* Center text */
+  margin-top: 18vh;
+  margin-bottom: 18vh;
 }
 
 .welcome h2 {
@@ -83,25 +88,30 @@
 
 .intro p {
   font-size: 1.6rem;
+  font-weight: 200;
+  letter-spacing: 0.5;
   /* Font size for intro paragraph */
 }
 
 .intro h2 {
   font-family: 'Roboto Condensed', sans-serif;
   /* Font style */
-  font-size: 4rem;
-  /* Large size for cinematic effect */
-  color: transparent;
-  /* Transparent text */
-  -webkit-text-stroke: 0.2rem white;
-  /* White outline */
+  font-size: 3rem;
   text-transform: uppercase;
   /* Uppercase letters */
   letter-spacing: 1rem;
   /* Spacing between letters */
   text-align: center;
+  font-weight: 300;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.105),
+      /* Stronger blur */
+      0 0 20px rgba(255, 255, 255, 0.6),
+      /* Medium blur */
+      0 0 30px rgba(255, 255, 255, 0.4);
+    /* Subtle blur */
+
   /* Center the text */
-  padding: 1rem;
+  padding: 0.5rem;
   /* Padding around text */
   margin: 0;
   /* Reset margins */
@@ -161,6 +171,11 @@
   /* Lift effect on hover */
 }
 
+.info-card:hover h3 {
+  text-decoration: underline;
+  /* Underline h3 on hover */
+}
+
 .info-card .icon {
   font-size: 2rem;
   /* Size for icon */
@@ -179,6 +194,7 @@
   /* Size for card heading */
   color: #ffffff;
   /* Heading color */
+  font-weight: 400;
 }
 
 .info-card p {
@@ -186,12 +202,9 @@
   /* Reset margins */
   color: #ffffff;
   /* Text color */
+  font-weight: 300;
 }
 
-.app-countdown {
-  margin-top: 20vh;
-  /* Space from the top */
-}
 
 
 /* Mobile Styles */

@@ -6,7 +6,7 @@
   overflow: hidden;
   /* Ensures no overflow outside the container */
   margin-top: 0px;
-  height: 100vh;
+  height: 150vh;
   display: flex; /* Enable flexbox */
   justify-content: center;
   align-items: center;
@@ -17,8 +17,8 @@
   position: absolute;
   top: 0px;
   left: 0;
-  width: 140vw;
-  height: 140vh;
+  width: 150vw;
+  height: 150vh;
   z-index: -5;
   
   /* Places the background image behind the content */
@@ -30,7 +30,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.726);
+  background: rgba(0, 0, 0, 0.861);
   /* Adjust the 0.5 to make it darker or lighter */
   z-index: 1;
   /* Ensures the overlay is above the image */
@@ -63,15 +63,17 @@
 }
 
 .card-header h2 {
-  font-size: 36px;
+    font-size: 36px;
     margin-bottom: 40px;
     color: #fffcfc;
     text-transform: uppercase;
     letter-spacing: 2px;
+    font-weight: 300;
 }
 
 .card-body p {
     font-size: 20px;
+    font-weight: 100;
     line-height: 1.8;
     text-align: left;
     color: #fffcfc;

@@ -11,7 +11,7 @@ body {
     /* Set a height for the container */
     color: #000000;
     /* Text color */
-    padding-bottom: 5vh;
+    padding-bottom: 2vh;
     
 }
 
@@ -41,7 +41,7 @@ body {
     /* Flexbox layout */
     justify-content: left;
     /* Space between items */
-    margin: 2rem 0;
+    margin: 2vh 0;
     /* Space above and below */
     position: relative;
     /* Relative positioning for child elements */
@@ -67,7 +67,7 @@ hr {
     /* Rounded corners */
     box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
     /* Subtle shadow */
-    padding: 1rem;
+    padding: 1vh;
     /* Padding inside card */
 }
 

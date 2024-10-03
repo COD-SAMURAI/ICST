@@ -1,7 +1,19 @@
+.outercover{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
 .cover {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #cee5ddef;
+    padding: 0.5vh;
+    width:max-content;
+    border-radius: 3px;
+    border: 0.4px solid rgb(0, 0, 0);
 }
 
 
@@ -16,20 +28,21 @@
 }
 
 .countdown-box {
-    backdrop-filter: blur(30px);
+    background-color: #cee5ddef;
     border-radius: 5px;
-    border: 0.4px solid white;
+    border: 0.4px solid rgb(0, 0, 0);
     padding: 20px;
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
 
 h2{
-    padding:20px;
-    color: white;
+    padding:1vh;
+    color: rgb(0, 0, 0);
     /* Make the text inside transparent */
     /* Outline the text with a white border */
+    
     margin:2px;
     font-size: 2.2rem;
     font-weight: 300;
@@ -80,7 +93,7 @@ h2{
 
     .countdown-box {
         backdrop-filter: blur(20px);
-        border: 1px solid white;
+        border: 1px solid rgb(0, 0, 0);
         height:3vh;
         width:5.5vw;
         text-align: center;
@@ -101,7 +114,7 @@ h2{
     h2 {
         text-align: center;
         padding: 20px;
-        color: white;
+        color: rgb(0, 0, 0);
         /* Make the text inside transparent */
         /* Outline the text with a white border */
         margin: 2px;

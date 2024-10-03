@@ -5,11 +5,12 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { SidebarComponent } from '../sidebar/sidebar.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatMenuModule } from '@angular/material/menu';
 
 @Component({
   selector: 'app-navbar',
   standalone: true,
-  imports: [RouterModule, CommonModule, SidebarComponent ,MatToolbarModule],
+  imports: [RouterModule, CommonModule, SidebarComponent ,MatMenuModule, MatToolbarModule],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
 })

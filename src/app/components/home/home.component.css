@@ -12,7 +12,7 @@
   align-items: center;
   background-color: rgba(7, 112, 173, 0);
   /* Transparent background */
-  height: 120vh;
+  height: 100vh;
   /* Margin from the top */
   position:relative;
 }
@@ -21,9 +21,9 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   /* Full viewport width */
-  height: 140vh;
+  height: 100%;
   /* Extends beyond viewport height */
   z-index: -5;
   /* Behind the content */
@@ -45,20 +45,20 @@
   border-radius: 1rem;
   /* Rounded corners */
   padding: 5rem;
-  padding-top: 10vh;
+  padding-top: 5vh;
   /* Padding around content */
   max-width: 100%;
   /* Full width */
   text-align: center;
   /* Center text */
-  margin-top: 18vh;
+  margin-top: 10vh;
   margin-bottom: 18vh;
 }
 
 .welcome h2 {
   font-size: 3rem;
   /* Size for the heading */
-  color: #ffffff;
+  color: #000000;
   /* Text color */
   margin-bottom: 1rem;
   /* Space below heading */
@@ -67,20 +67,25 @@
 .welcome p {
   font-size: 1.1rem;
   /* Size for paragraph */
-  color: #ffffff;
+  color: #000000;
   /* Text color */
   line-height: 1.6;
   /* Line height for readability */
 }
 
 .welcome-intro {
-  border: 0.4px solid white;
+  border: 0.4px solid rgb(0, 0, 0);
   /* Border color */
   padding: 1rem;
   /* Padding inside the intro box */
   margin-top: 5vh;
-  /* Space from the top */
-  backdrop-filter: blur(30px);
+    /* Transparent white */
+  background-color: #cee5ddef;
+    /* Blur and increase saturation */
+    border-radius: 10px;
+    /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* Soft shadow */
   /* Blurring effect */
   border-radius: 0.5rem;
   /* Rounded corners */
@@ -144,9 +149,9 @@
 }
 
 .info-card {
-  border: 0.4px solid white;
+  border: 0.4px solid rgb(0, 0, 0);
   /* Border color */
-  backdrop-filter: blur(30px);
+  background-color: #cee5ddef;
   /* Blurring effect */
   border-radius: 0.625rem;
   /* Rounded corners */
@@ -165,7 +170,7 @@
 }
 
 .info-card:hover {
-  backdrop-filter: blur(50px);
+  backdrop-filter: blur(70px);
   /* Stronger blur on hover */
   transform: translateY(-0.5rem);
   /* Lift effect on hover */
@@ -179,7 +184,7 @@
 .info-card .icon {
   font-size: 2rem;
   /* Size for icon */
-  color: #ffffff;
+  color: #000000;
   /* Icon color */
   margin-bottom: 0.5rem;
   /* Space below icon */
@@ -192,7 +197,7 @@
   /* Space around heading */
   font-size: 1.2rem;
   /* Size for card heading */
-  color: #ffffff;
+  color: #000000;
   /* Heading color */
   font-weight: 400;
 }
@@ -200,7 +205,7 @@
 .info-card p {
   margin: 0;
   /* Reset margins */
-  color: #ffffff;
+  color: #000000;
   /* Text color */
   font-weight: 300;
 }

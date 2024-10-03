@@ -1,15 +1,40 @@
 <!-- Navbar with Angular Material toolbar -->
+<div class="cover">
+
 <mat-toolbar class="navbar" *ngIf="!isSmallScreen">
+
+
+  <div class="logocover">
+    <img src="../../../assets/logos/ICSTlogo.png" alt="NIE Logo" class="logo" >
+    <div class="overlay"></div>
+  </div>
+
+
+
+  <div class="navcover">
   <a mat-button routerLink="/">Home</a>
   <a mat-button routerLink="/about">About</a>
   <a mat-button routerLink="/committee">Committee</a>
-  <a mat-button routerLink="/callforpaper">Call For Papers</a>
+
+  <!-- Call For Papers with dropdown -->
+  <div class="dropdown">
+    <a mat-button class="dropbtn" routerLink="/callforpaper">Call For Papers</a>
+    <div class="dropdown-content">
+      <a routerLink="/importantdates">Important Dates</a>
+      <a href="assets/conference-brochure.pdf" target="_blank">Conference Brochure</a>
+    </div>
+  </div>
+
   <a mat-button href="#Awards">Awards</a>
   <a mat-button routerLink="/register">Registration</a>
   <a mat-button routerLink="/sponsors">Sponsors</a>
   <a mat-button routerLink="/tracks">Tracks</a>
   <a mat-button routerLink="/contactus">Contact Us</a>
+  </div>
+
+
 </mat-toolbar>
+</div>
 
 <!-- Sidebar that shows up when the screen size is small -->
 <app-sidebar *ngIf="isSmallScreen"></app-sidebar>

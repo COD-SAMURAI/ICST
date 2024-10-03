@@ -1,159 +1,96 @@
-/* call-for-papers.component.css */
 .call-for-papers {
-    width: 90vw;
-    margin: 8% auto;
-    padding: 5px;
-    font-family: 'Arial', sans-serif;
-  }
-
-.background-image {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 100vw;
-  height: 100vh;
-  z-index: -5;
-  /* Places the background image behind the content */
-}
-  
-    
-
-.contentcover{
-  backdrop-filter: blur(80px);
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 5px 5px;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* Full viewport height */
+  background-color: #f0f0f000;
+  /* Light background color */
+  padding: 20px;
 }
 
-  .content-card {
-    border-radius: 12px;
-    padding: 10px 3px;
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-   
-  }
-  
-  .content-card h3 {
-    text-align: center;
+.contentcover {
+  max-width: 800px;
+  /* Limit width for better readability */
+  margin: auto;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Slightly opaque white */
+}
+
+.content-card {
+  font-family: 'Arial', sans-serif;
+}
+
+h3 {
+  text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
-    color: #ffffff;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 300;
-  }
-  
-  .content-card p {
-    color: #ffffff;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 15px;
-    font-weight: 300;
-  }
-  
-  .template-link, .submission-link {
-    color: #006400;
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .template-link:hover, .submission-link:hover {
-    text-decoration: underline;
-  }
-  
-  .submit-btn, .download-btn {
-    display: inline-block;
-    background-color: #004364;
-    color: #ffffff;
-    padding: 12px 20px;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 8px;
-    margin: 20px 10px 0 0; /* Added right margin for spacing between buttons */
-    transition: background-color 0.3s ease;
-  }
-  
-  .submit-btn:hover, .download-btn:hover {
-    background-color: #004d00;
-  }
-  
- /* Mobile Media Query */
- @media (max-width: 767px) {
+    margin-bottom: 20px;
+}
 
-   /* Call for papers container */
-   .call-for-papers {
-     width: 100vw;
-     /* Change vh to vw for better fit on mobile */
-     /* Adjust margin for better centering on small screens */
-     padding: 10px;
-     /* Increase padding for a more spacious look */
-   }
+p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+  /* Darker text color */
+}
 
-   /* Background image */
-   .background-image {
-     width: 100vw;
-     height: 100vh;
-   }
+a.template-link,
+a.submission-link,
+.download-btn{
+  display: inline-block;
+  margin: 10px 0;
+  padding: 12px 20px;
+  background-color: #23d004;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
 
-   
+a.template-link:hover,
+a.submission-link:hover,
+.download-btn:hover
+{
+  background-color: #000;
+  /* Dark background on hover */
+}
 
-   /* Content cover for mobile */
-   .contentcover {
-     backdrop-filter: blur(50px);
-     /* Reduce blur effect for mobile readability */
-     border-radius: 8px;
-     padding: 10px;
-   }
+.submit-btn {
+  display: inline-block;
+  /* Ensure buttons are inline */
+  margin: 15px 0;
+  /* Add vertical margin to create space between buttons */
+  padding: 10px 20px;
+  /* Add padding for better button appearance */
+  font-size: 18px;
+  /* Font size for the buttons */
+  color: #fff;
+  /* Text color */
+  background-color: #007BFF;
+  /* Button background color */
+  border: none;
+  /* Remove border */
+  border-radius: 5px;
+  /* Rounded corners */
+  text-decoration: none;
+  /* Remove underline */
+  text-align: center;
+  /* Center text inside the button */
+  transition: background-color 0.3s;
+  /* Smooth transition for hover effect */
+}
 
-   /* Content card */
-   .content-card {
-     border-radius: 8px;
-     /* Slightly smaller border radius for mobile */
-     padding: 15px 10px;
-     /* Adjust padding for smaller screens */
-     margin: 10px;
-     /* Reduce margins */
-   }
-
-   /* Headings inside content card */
-   .content-card h3 {
-     font-size: 28px;
-     /* Decrease heading size for mobile */
-     margin-bottom: 30px;
-     letter-spacing: 1.5px;
-   }
-
-   /* Paragraphs inside content card */
-   .content-card p {
-     font-size: 16px;
-     /* Decrease text size */
-     line-height: 1.5;
-     margin-bottom: 10px;
-   }
-
-   /* Links */
-   .template-link,
-   .submission-link {
-     font-size: 16px;
-     /* Decrease font size for mobile */
-   }
-
-   /* Buttons */
-   .submit-btn,
-   .download-btn {
-     font-size: 14px;
-     /* Smaller font size */
-     padding: 10px 15px;
-     /* Reduce button padding */
-     margin: 15px 5px 0 0;
-     /* Adjust margin for better spacing */
-   }
-
-   .submit-btn:hover,
-   .download-btn:hover {
-     background-color: #004d00;
-     /* Hover effect stays the same */
-   }
- }
+.submit-btn:hover {
+  background-color: #0056b3;
+  /* Darker background on hover */
+}

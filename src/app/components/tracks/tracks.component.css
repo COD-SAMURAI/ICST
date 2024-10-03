@@ -1,169 +1,80 @@
-.tracks-section {
-    padding: 40px 20px;
-    text-align: center;
-    margin-top: 30px;
+/* General styling for the page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e6f9e600;
+    /* Light green background */
 }
 
+/* Styling for the background image - removed video section */
 .background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: -5;
-    overflow: hidden;
-    /* Places the background image behind the content */
+    display: none;
+    /* Hide the background image section */
 }
 
-.background-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8);
-    /* Adjust to make it darker or lighter */
-    z-index: 1;
-    /* Ensures the overlay is above the image */
-}
-
-.tracks-section h1 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: 300;
-}
-
-.section-title {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #ffffff;
-}
-
-.track-cards-container {
-    display: grid;
-    /* Change to grid layout */
-    grid-template-columns: repeat(3, 1fr);
-        /* Three columns */
-    /* Responsive grid columns */
-    gap: 20px;
-    /* Space between cards */
-    justify-items: center;
-    /* Center align items */
-}
-
-.track-card {
-    backdrop-filter: blur(40px);
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.628);
+/* Section styling */
+.tracks-section {
     padding: 20px;
+    text-align: center;
+}
+
+/* Heading styling */
+.section-title {
+    text-align: center;
+        font-size: 36px;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 300;
+        margin-bottom: 20px;
+}
+
+/* Card container styling */
+.track-cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+/* Individual track card styling */
+.track-card {
+    background-color: #ffffff;
+    /* White background for cards */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    /* Fixed width for cards */
+    transition: transform 0.3s;
     text-align: left;
-    transition: transform 0.3s ease;
+    /* Left align text within the card */
 }
 
-.track-title {
-    font-size: 25px;
-    margin-bottom: 15px;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-weight: 300;
-}
-
+/* List styling */
 .track-themes {
-    list-style-type: disc;
-    padding-left: 20px;
-    font-size: 18px;
-    color: #ffffff;
-    font-weight: 300;
+    list-style-type: none;
+    /* Remove bullets */
+    padding: 0;
 }
 
+/* List item styling with numbering */
 .track-themes li {
-    margin-bottom: 10px;
+    padding: 5px 0;
+    /* Space out items */
+    color: #34495e;
+    /* Darker gray for items */
 }
 
-.track-card:hover {
-    transform: translateY(-10px);
+.track-themes li::before {
+    content: counter(item) ". ";
+    /* Number the list items */
+    counter-increment: item;
+    /* Increment the counter */
 }
 
-@media only screen and (max-width: 767px) {
-    .tracks-section {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .background-image {
-        position: fixed;
-        width: 100vw;
-        height: 100vh;
-        top: 0;
-        left: 0;
-        z-index: -5;
-        overflow: hidden;
-    }
-
-    .background-image::before {
-        background: rgba(0, 0, 0, 0.8);
-        /* Adjust if needed */
-        z-index: 1;
-    }
-
-    .tracks-section h1 {
-        font-size: 28px;
-        margin-bottom: 20px;
-        letter-spacing: 1px;
-    }
-
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 20px;
-    }
-
-    .track-card {
-        padding: 15px;
-        margin: 15px auto;
-        max-width: 100%;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(255, 255, 255, 0.6);
-        transition: transform 0.3s ease;
-    }
-
-    .track-title {
-        font-size: 22px;
-        margin-bottom: 10px;
-    }
-
-    .track-themes {
-        padding-left: 15px;
-        font-size: 16px;
-    }
-
-    .track-themes li {
-        margin-bottom: 8px;
-    }
-
-    .track-info h3 {
-        font-size: 20px;
-        margin-bottom: 8px;
-    }
-
-    .track-info p {
-        font-size: 16px;
-        margin-bottom: 4px;
-    }
-
-    .track-info ul {
-        padding-left: 15px;
-        font-size: 16px;
-    }
-
-    .track-info ul li {
-        margin-bottom: 8px;
-    }
-
-    .track-card:hover {
-        transform: translateY(-8px);
-    }
+/* Reset the counter for each track */
+.track-card {
+    counter-reset: item;
+    /* Reset the counter for each track card */
 }

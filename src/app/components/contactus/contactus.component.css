@@ -1,112 +1,63 @@
-/* contact-us.component.css */
-
-.contactbackground {
-    margin-top: 0px;
-    padding: 10% 22%;
-    display: flex;
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
-    /* Ensure it takes up full viewport height */
-}
-
-.background-image {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 210vh;
-    z-index: -5;
-    /* Places the background image behind the content */
-}
-
-.background-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures the image covers the entire container */
-    object-position: center;
-    /* Centers the image within the container */
-}
-
-.background-image::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    /* Adjust the RGBA value for lighter darkness */
-    /* Places the overlay above the image but below the content */
-}
-
+/* Main contact us section styling */
 .contact-us {
-    width: 90%;
-    max-width: 1200px;
-    /* Adjusted from 100vh to a more suitable width */
-    padding: 20px;
-    backdrop-filter: blur(10px);
-    /* Reduced blur for a clearer effect */
+    background-color: #ffffff00;
+    /* Light background color */
+    padding-left: 10vw;
+    padding-right: 10vw;
     border-radius: 8px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    /* Increased shadow for more contrast */
-    backdrop-filter: blur(40px);
-    /* Added a white background with slight transparency */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.line {
-    width: 2px;
-    background-color: #ccc;
-    height: 100%;
-}
-
+/* Heading styles */
 .contact-us h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-    color: #ffffff;
-    /* Darker text color for better contrast */
-    text-transform: uppercase;
-    letter-spacing: 2px;
     text-align: center;
-}
-
-.contact-us p {
-    font-size: 18px;
-    margin-bottom: 30px;
-    color: #ffffff;
-    /* Darker text color for better contrast */
-}
-
-.contact-section {
+        font-size: 36px;
+        color: #000000;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 300;
     margin-bottom: 20px;
 }
 
-.contact-section h3 {
-    color: #ffffff;
-    /* Darker color for better readability */
-    margin-bottom: 10px;
-    font-size: 25px;
+.contact-us h3 {
+    font-size: 24px;
+    line-height: 1.6;
+    color: #000000;
+    text-transform: uppercase;
+        letter-spacing: 2px;
+        font-weight: 300;
+    /* Accent color for section headings */
+    margin-top: 20px;
 }
 
-.contact-section p {
-    margin: 5px 0;
-    color: #bbbbbb;
-    /* Slightly lighter color for better contrast */
+/* Paragraph styles */
+.contact-us p {
     font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 15px;
+        color: #333;
 }
 
-.contact-section a {
-    color: #0056b3;
-    /* Slightly darker blue for better readability */
+/* Link styles */
+.contact-us a {
+    color: #2980b9;
+    /* Link color */
     text-decoration: none;
-    display: inline-block;
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.contact-section a:hover {
-    box-shadow: 0 6px 12px rgba(0, 86, 179, 0.3);
-    /* Slightly lighter shadow for hover effect */
-    transform: translateY(-2px);
+.contact-us a:hover {
+    text-decoration: underline;
+    /* Underline links on hover */
+}
+
+/* Divider styles */
+.divider {
+    border: 1px solid #e0e0e0;
+    /* Light gray divider */
+    margin: 20px 0;
+}
+
+/* Contact section styles */
+.contact-section {
+    margin-bottom: 20px;
 }

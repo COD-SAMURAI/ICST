@@ -1,69 +1,47 @@
-/* about-card.component.css */
-
 .about-container {
-  position: relative;
-  /* Allows positioning of child elements */
-  overflow: hidden;
-  /* Ensures no overflow outside the container */
-  margin-top: 0px;
-  height: 150vh;
-  display: flex; /* Enable flexbox */
+  display: flex;
   justify-content: center;
   align-items: center;
-
+  min-height: 100vh;
+  /* Full viewport height */
+  background-color: #ffffff00;
+  /* Light background color */
+  padding: 20px;
 }
-
-.background-image {
-  position: absolute;
-  top: 0px;
-  left: 0;
-  width: 150vw;
-  height: 150vh;
-  z-index: -5;
-  
-  /* Places the background image behind the content */
-}
-
-
-
-
 
 .card {
-  max-width: 1230px;
-  margin: 5px auto;
+  max-width: 800px;
+  /* Limit width for better readability */
+  margin: auto;
   padding: 20px;
   backdrop-filter: blur(20px);
   border-radius: 12px;
-  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.359);
-  font-family: 'Arial', sans-serif;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.card-header {
-  margin-bottom: 15px;
-  padding-bottom: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  /* Soft shadow */
+  background-color: rgba(255, 255, 255, 0.9);
+  /* Slightly opaque white */
 }
 
 .card-header h2 {
+  text-align: center;
     font-size: 36px;
-    margin-bottom: 40px;
-    color: #fffcfc;
+    color: #000000;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 300;
+    margin-bottom: 20px;
+}
+
+.card-header .divider {
+  border: 1px solid #ccc;
+  /* Light divider color */
+  margin: 10px 0;
 }
 
 .card-body p {
-    font-size: 20px;
-    font-weight: 100;
-    line-height: 1.8;
-    text-align: left;
-    color: #fffcfc;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #333;
+  /* Darker text color */
 }

@@ -66,7 +66,7 @@ describe('NavbarComponent', () => {
     });
   
     // Replace the renderer2 instance in the component with the spy
-    component.renderer = renderer2Spy;
+
   
     // Act: Call ngOnInit to add the listener
     component.ngOnInit();
@@ -94,7 +94,7 @@ describe('NavbarComponent', () => {
     });
   
     // Replace the renderer2 instance in the component with the spy
-    component.renderer = renderer2Spy;
+
   
     // Act: Call ngOnDestroy
     component.ngOnDestroy();

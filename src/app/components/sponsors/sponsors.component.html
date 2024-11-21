@@ -1,65 +1,15 @@
-
-<section class="sponsor-section">
-    
-    <div class="sponsor-cover">
-    <h1 class="section-title">SPONSORS</h1>
-    <hr>
-    <div class="sponsor-category gold">
-        <h2 class="category-title">GOLD</h2>
-        <div class="sponsor-cards">
-            <div class="card"> <!-- Card 1 -->
-                <img src="path/to/gold-sponsor1.png" alt="Gold Sponsor 1">
-                <p>Sponsor Name 1</p>
-            </div>
-            <div class="card"> <!-- Card 2 -->
-                <img src="path/to/gold-sponsor2.png" alt="Gold Sponsor 2">
-                <p>Sponsor Name 2</p>
-            </div>
-            <div class="card"> <!-- Card 3 -->
-                <img src="path/to/gold-sponsor3.png" alt="Gold Sponsor 3">
-                <p>Sponsor Name 3</p>
+<section class="sponsors_cover">
+    <h2>Our Sponsors</h2>
+    <div class="cards" #cardsContainer>
+        <div class="cards-holder">
+            <div class="card" *ngFor="let sponsor of sponsors">
+                <img [src]="sponsor.src" alt="{{ sponsor.name }}">
+                <div class="sponsor_name">{{ sponsor.name }}</div>
             </div>
         </div>
     </div>
 
-    <div class="sponsor-category silver">
-        <h2 class="category-title">SILVER</h2>
-        <div class="sponsor-cards">
-            <div class="card"> <!-- Card 1 -->
-                <img src="path/to/silver-sponsor1.png" alt="Silver Sponsor 1">
-                <p>Sponsor Name 1</p>
-            </div>
-            <div class="card"> <!-- Card 2 -->
-                <img src="path/to/silver-sponsor2.png" alt="Silver Sponsor 2">
-                <p>Sponsor Name 2</p>
-            </div>
-            <div class="card"> <!-- Card 3 -->
-                <img src="path/to/silver-sponsor3.png" alt="Silver Sponsor 3">
-                <p>Sponsor Name 3</p>
-            </div>
-        </div>
-    </div>
-
-    <div class="sponsor-category standard">
-        <h2 class="category-title">STANDARD</h2>
-        <div class="sponsor-cards">
-            <div class="card"> <!-- Card 1 -->
-                <img src="path/to/standard-sponsor1.png" alt="Standard Sponsor 1">
-                <p>Sponsor Name 1</p>
-            </div>
-            <div class="card"> <!-- Card 2 -->
-                <img src="path/to/standard-sponsor2.png" alt="Standard Sponsor 2">
-                <p>Sponsor Name 2</p>
-            </div>
-            <div class="card"> <!-- Card 3 -->
-                <img src="path/to/standard-sponsor3.png" alt="Standard Sponsor 3">
-                <p>Sponsor Name 3</p>
-            </div>
-        </div>
-    </div>
-    </div>
-    <div class="background-image1">
-        <img src="../../../assets/images/sponsorshipbackground.png">
-    </div>
+    <!-- Scroll Buttons -->
+    <button class="scroll-left" (click)="scrollLeft()">←</button>
+    <button class="scroll-right" (click)="scrollRight()">→</button>
 </section>
-

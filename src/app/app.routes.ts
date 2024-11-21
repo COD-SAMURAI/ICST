@@ -8,6 +8,9 @@ import { CallforpaperComponent } from './components/callforpaper/callforpaper.co
 import { ContactusComponent } from './components/contactus/contactus.component';
 import { AboutComponent } from './components/about/about.component';
 import { PaymentComponent } from './components/payment/payment.component';
+
+
+
 export const routes: Routes = [
   
   { path: 'home', component: HomeComponent , title : "Home page" },

@@ -3,12 +3,11 @@
 
 <!-- Sidebar Content -->
 <div class="sidebar-container" *ngIf="(isVisible | async)">
-  <div class="sidebar" data-aos="fade-right">
+  <div class="sidebar" data-aos="fade-right" >
     <a routerLink="/" (click)="hideSidebar()">Home</a>
     <a routerLink="/about" (click)="hideSidebar()">About</a>
     <a routerLink="/committee" (click)="hideSidebar()">Committee</a>
     <a routerLink="/callforpaper" (click)="hideSidebar()">Call For Papers</a>
-    <a href="#Awards" (click)="hideSidebar()">Awards</a>
     <a routerLink="/register" routerLinkActive="active" ariaCurrentWhenActive="page" (click)="hideSidebar()">Registration</a>
     <a routerLink="/sponsors" (click)="hideSidebar()">Sponsors</a>
     <a routerLink="/tracks" (click)="hideSidebar()">Tracks</a>

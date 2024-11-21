@@ -1,40 +1,17 @@
-<!-- Navbar with Angular Material toolbar -->
-<div class="cover">
-
-<mat-toolbar class="navbar" *ngIf="!isSmallScreen">
-
-
-  <div class="logocover">
-    <img src="../../../assets/logos/ICSTlogo.png" alt="NIE Logo" class="logo" >
-    <div class="overlay"></div>
-  </div>
-
-
-
-  <div class="navcover">
-  <a mat-button routerLink="/">Home</a>
-  <a mat-button routerLink="/about">About</a>
-  <a mat-button routerLink="/committee">Committee</a>
-
-  <!-- Call For Papers with dropdown -->
-  <div class="dropdown">
-    <a mat-button class="dropbtn" routerLink="/callforpaper">Call For Papers</a>
-    <div class="dropdown-content">
-      <a routerLink="/register" fragment="important-dates">Important Dates</a>
-      <a href="../../../assets/documents/ICST.pdf" target="_blank">Conference Brochure</a>
-    </div>
-  </div>
-
-  <a mat-button href="#Awards">Awards</a>
-  <a mat-button routerLink="/register">Registration</a>
-  <a mat-button routerLink="/sponsors">Sponsors</a>
-  <a mat-button routerLink="/tracks">Tracks</a>
-  <a mat-button routerLink="/contactus">Contact Us</a>
-  </div>
-
-
-</mat-toolbar>
-</div>
-
-<!-- Sidebar that shows up when the screen size is small -->
-<app-sidebar *ngIf="isSmallScreen"></app-sidebar>
+<body>
+<header [ngClass]="{'sticky-navbar': isSticky}">
+  <img src="../../../assets/logos/ICSTlogo.png" alt="ICST Logo" class="logo" />
+  <nav>
+    <ul>
+      <li><a routerLink="home">Home</a></li>
+      <li><a routerLink="about">About</a></li>
+      <li><a routerLink="committee">Committee</a></li>
+      <li><a routeLink="conclave">Conclave</a></li>
+      <li><a routerLink="callforpaper">Call For Papers</a></li>
+      <li><a routerLink="tracks">Track</a></li>
+      <li><a routerLink="register">Registration</a></li>
+      <li><a routerLink="contactus">Contact Us</a></li>
+    </ul>
+  </nav>
+</header>
+</body>

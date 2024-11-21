@@ -12,8 +12,8 @@ import { CommitteeComponent } from './components/committee/committee.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import * as AOS from 'aos';
 
-import { NgxSpinnerService } from 'ngx-spinner';
-import { NgxSpinnerModule } from 'ngx-spinner';
+
+
 import { trigger, transition, style, animate } from '@angular/animations';
 
 @Component({
@@ -31,7 +31,7 @@ import { trigger, transition, style, animate } from '@angular/animations';
     RouterLink,
     RouterOutlet,
     MatToolbarModule,
-    NgxSpinnerModule
+
   ],
   templateUrl: 'app.component.html',
   styleUrls: ['app.component.css'],
@@ -49,26 +49,16 @@ export class AppComponent {
 
   constructor(
     @Inject(PLATFORM_ID) private platformId: Object, 
-    private spinner: NgxSpinnerService
+
   ) {}
 
   ngOnInit() {
-    this.showSpinner();
 
     if (isPlatformBrowser(this.platformId)) {
       AOS.init({
         duration: 2000
       });
     }
-  }
-
-  showSpinner() {
-    this.spinner.show();
-
-    // Hide the spinner after some time (3 seconds)
-    setTimeout(() => {
-      this.spinner.hide();
-    }, 3000);
   }
 
   prepareRoute(outlet: any) {

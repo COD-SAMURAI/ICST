@@ -1,0 +1,80 @@
+.card_section {
+    padding: 50px 20px;
+    background-color:white ;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap:10%;
+    height:80vh;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 30px;
+    flex-wrap: wrap;
+    height:25vh
+}
+
+.card {
+    background-color: #3C5E4B;
+    border-radius: 12px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
+.card-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-icon {
+    height:60%;
+    width:40%;
+}
+
+.card-head {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.card-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    line-height: 1.5;
+    width: 7vw;
+}
+
+
+.hero_png {
+    position:absolute;
+    left: 0;
+    margin-bottom: -43vh;
+    
+}
+
+.hero_png img {
+    max-width: 500px;
+    height: 450px;
+}

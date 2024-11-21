@@ -1,91 +1,32 @@
-<head>
-    <!-- Other head elements -->
-  
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
+<section class="hero">
 
+<div claas="logos">
 
-<div class="cover">
-  <div class="container">
+  <div class="logo_container">
 
-  <div class="background-image" data-aos="fade-right">
-    <img src="https://www.openaccessgovernment.org/wp-content/uploads/2020/01/dreamstime_xxl_155564094.jpg">
+    <img *ngFor="let image of images" [src]="image" alt="Logo Image" class="logo">
+
   </div>
- 
-    <div class="container-cover">
-<div class="welcome" data-aos="fade-left">
-    <div class="welcome-intro">
-    <div class="intro">
-        <h2>ICST - 2025</h2>
-        <p>Join us for an inspiring event where industry leaders, researchers, and professionals gather to explore<br>
-            the latest advancements in sustainable technology and its impact on our world.</p>
-    </div>
-    </div>
-    
-
-
-
-    <section class="home-info" data-aos="fade-down">
-        <div class="info-cards">
-          <!-- Date Card -->
-          <div class="info-card date-card" (click)="onDateCardClick()">
-            <div class="icon">
-              <i class="fas fa-calendar-alt"></i> <!-- Date Icon -->
-            </div>
-            <div class="info-text">
-              <h3>Febraury <br>19-20, 2025</h3>
-              <p>Date</p>
-            </div>
-          </div>
-
-          
-
-          <!-- Venue Card -->
-          <div class="info-card venue-card" (click)="onVenueCardClick()">
-            <div class="icon">
-              <i class="fas fa-map-marker-alt"></i> <!-- Venue Icon -->
-            </div>
-            <div class="info-text">
-              <h3>The National Institute of Engineering</h3>
-              <p>Venue</p>
-            </div>
-          </div>
-      
-          <!-- Conference Approval Card -->
-          <div class="info-card conference-card">
-            <div class="icon">
-              <i class="fas fa-check-circle"></i> <!-- Conference Approval Icon -->
-            </div>
-            <div class="info-text">
-              <a href="https://ieimysore.org.in"><h3>IEI Approved Conference</h3></a>
-            </div>
-          </div>
-      
-          <!-- Global Participation Card -->
-          <div class="info-card participation-card">
-            <div class="icon">
-              <i class="fas fa-globe"></i> <!-- Global Participation Icon -->
-            </div>
-            <div class="info-text">
-              <h3>Global Participation</h3>
-              <p>Researchers from Around the World</p>
-            </div>
-          </div>
-          
-        </div>
-      
-    </section>
-<app-countdown></app-countdown>
-</div>
-</div>
-</div>
-
-
-<app-vision-mission>
-</app-vision-mission>
-
-
-
 
 </div>
+
+<div class="hero_intro">
+
+  <h3>ICST - 2025</h3>
+
+  <p>Join us for an inspiring event where industry leaders, researchers, and professionals gather to <br> explore the latest
+  advancements in sustainable technology and its impact on our world.</p>
+
+</div>
+
+<div class="hero_png">
+  <img src="../../../assets/images/illustrations/hero1.png">
+</div>
+
+</section>
+
+<app-cards></app-cards>
+
+<app-vision-mission></app-vision-mission>
+
+<app-sponsors></app-sponsors>

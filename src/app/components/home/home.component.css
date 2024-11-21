@@ -1,312 +1,72 @@
-
-
-
-.cover{
-  justify-content:flex-start;
-
-}
-.container {
-  /* Adjusted for relative spacing */
+.hero {
+  background-color: #3C5E4B;
+  color: white;
+  padding: 20px;
+  height:85vh;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  background-color: rgba(7, 112, 173, 0);
-  /* Transparent background */
-  height: 100vh;
-  /* Margin from the top */
-  position:relative;
+  justify-content: top;
+  gap:20%;
 }
 
-.background-image {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  /* Full viewport width */
-  height: 100%;
-  /* Extends beyond viewport height */
-  z-index: -5;
-  /* Behind the content */
-}
-
-.background-image img {
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  object-fit: cover;
-  /* Cover the entire container */
-  object-position: center;
-  /* Center the image */
-}
-
-.welcome {
-  /* Reset margins */
-  border-radius: 1rem;
-  /* Rounded corners */
-  padding: 5rem;
-  padding-top: 5vh;
-  /* Padding around content */
-  max-width: 100%;
-  /* Full width */
-  text-align: center;
-  /* Center text */
-  margin-top: 10vh;
-  margin-bottom: 18vh;
-}
-
-.welcome h2 {
-  font-size: 3rem;
-  /* Size for the heading */
-  color: #000000;
-  /* Text color */
-  margin-bottom: 1rem;
-  /* Space below heading */
-}
-
-.welcome p {
-  font-size: 1.1rem;
-  /* Size for paragraph */
-  color: #000000;
-  /* Text color */
-  line-height: 1.6;
-  /* Line height for readability */
-}
-
-.welcome-intro {
-  border: 0.4px solid rgb(0, 0, 0);
-  /* Border color */
-  padding: 1rem;
-  /* Padding inside the intro box */
-  margin-top: 5vh;
-    /* Transparent white */
-  background-color: #cee5ddef;
-    /* Blur and increase saturation */
-    border-radius: 10px;
-    /* Rounded corners */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    /* Soft shadow */
-  /* Blurring effect */
-  border-radius: 0.5rem;
-  /* Rounded corners */
-}
-
-.intro p {
-  font-size: 1.6rem;
-  font-weight: 200;
-  letter-spacing: 0.5;
-  /* Font size for intro paragraph */
-}
-
-.intro h2 {
-  font-family: 'Roboto Condensed', sans-serif;
-  /* Font style */
-  font-size: 3rem;
-  text-transform: uppercase;
-  /* Uppercase letters */
-  letter-spacing: 1rem;
-  /* Spacing between letters */
-  text-align: center;
-  font-weight: 300;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.105),
-      /* Stronger blur */
-      0 0 20px rgba(255, 255, 255, 0.6),
-      /* Medium blur */
-      0 0 30px rgba(255, 255, 255, 0.4);
-    /* Subtle blur */
-
-  /* Center the text */
-  padding: 0.5rem;
-  /* Padding around text */
-  margin: 0;
-  /* Reset margins */
-  line-height: 1.2;
-  /* Line height */
-}
-
-.home-info {
-  margin-top: 3vh;
-  /* Space from the top */
-  padding: 1rem;
-  /* Padding inside */
+.logos{
   display: flex;
-  /* Flex container */
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  /* Center items */
-  flex-wrap: wrap;
-  /* Allow wrapping */
 }
 
-.info-cards {
+.logo_container {
   display: flex;
-  /* Flex container */
+  flex-direction: row;
+  align-items: center;
   justify-content: space-around;
-  /* Space around items */
-  flex-wrap: wrap;
-  /* Allow wrapping */
-  cursor: pointer;
-  /* Pointer on hover */
+  max-width: 80vw;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 10px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  gap: 15px;
 }
 
-.info-card {
-  border: 0.4px solid rgb(0, 0, 0);
-  /* Border color */
-  background-color: #cee5ddef;
-  /* Blurring effect */
-  border-radius: 0.625rem;
-  /* Rounded corners */
-  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
-  padding: 0.5rem;
-  /* Padding inside card */
-  margin: 1rem;
-  /* Margin around card */
-  width: 13rem;
-  /* Fixed width for cards */
+.logo{
+  margin-left: 2vw;
+  margin-right: 2vw;
+  width: auto;
+  height: 100px;
+}
+
+.hero_intro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  /* Center text inside card */
-  transition: background-color 0.3s ease, transform 0.3s ease;
-  /* Smooth transition */
 }
 
-.info-card:hover {
-  backdrop-filter: blur(70px);
-  /* Stronger blur on hover */
-  transform: translateY(-0.5rem);
-  /* Lift effect on hover */
-}
-
-.info-card:hover h3 {
-  text-decoration: underline;
-  /* Underline h3 on hover */
-}
-
-.info-card .icon {
-  font-size: 2rem;
-  /* Size for icon */
-  color: #000000;
-  /* Icon color */
-  margin-bottom: 0.5rem;
-  /* Space below icon */
-  padding-top: 1rem;
-  /* Space above icon */
-}
-
-.info-card h3 {
-  margin: 0.5rem 0;
-  /* Space around heading */
-  font-size: 1.2rem;
-  /* Size for card heading */
-  color: #000000;
-  /* Heading color */
-  font-weight: 400;
-}
-
-.info-card p {
-  margin: 0;
-  /* Reset margins */
-  color: #000000;
-  /* Text color */
+.hero_intro h3{
+  font-size: 50px;
   font-weight: 300;
+  margin-bottom:2vh;
+  letter-spacing: 15px;
 }
 
+.hero_intro p{
+  font-size: 25px;
+  font-weight: 200;
+  margin-bottom: 4vh;
+  line-height: 40px;
+}
 
+.hero_png{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  
+}
 
-/* Mobile Styles */
-@media (max-width: 768px) {
-
-  .cover {
-    margin-top: 0vh;
-    margin-bottom: 30vh;
-    
-  }
-  .container {
-    padding: 1rem;
-    margin-bottom: 0px;
-  }
-    
-
-    .background-image {
-      position: absolute;
-      top: 0px;
-      left: 0px;
-      width: 100vw;
-      height: 110vh;
-      z-index: -3;
-      /* Places the background image behind the content */
-    }
-
-    .background-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      /* Ensures the image covers the entire container */
-      object-position: center;
-      /* Centers the image within the container */
-    }
-
-  .welcome {
-    padding: 1.5rem;
-    max-width: 100%;
-  }
-
-  .welcome h2 {
-    font-size: 1.5rem;
-  }
-
-  .welcome p {
-    font-size: 1rem;
-  }
-
-  .home-info {
-    padding: 1rem;
-    display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-  }
-
-  .info-cards {
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-
-  .info-card {
-    width: 30%;
-    margin: 1rem 0;
-    padding: 0.5rem;
-  }
-
-  .info-card .icon {
-    font-size: 1.5rem;
-  }
-
-  .info-card h3 {
-    font-size: 0.8rem;
-  }
-
-  .info-card p {
-    font-size: 0.5rem;
-  }
-        .intro h2 {
-          font-family: 'Roboto Condensed', sans-serif;
-          /* Use a bold, condensed font similar to Interstellar */
-          font-size: 7vw;
-          /* Large text size for a cinematic effect */
-          color: transparent;
-          /* Make the text transparent */
-          -webkit-text-stroke: 0.7px white;
-          /* White outline */
-          text-transform: uppercase;
-          /* Make the text uppercase for a bold title effect */
-          letter-spacing: 10px;
-          /* Space out the letters */
-          text-align: center;
-          /* Center the text */
-          padding: 5px;
-          margin: 0;
-          line-height: 0.6;
-          /* Adjust line-height for better spacing */
-        }
-
+.hero_png img{
+  max-width: 600px;
+  height: 550px;
 }

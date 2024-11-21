@@ -1,131 +1,108 @@
-.sponsor-section {
-
-    position: relative;
-    text-align: center;
+.sponsors_cover {
     display: flex;
-    justify-content: center;
-    /* Center horizontally */
-    align-items: center;
-    /* Center vertically */
     flex-direction: column;
-    
-}
-
-.background-image {
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    width: 100vw;
-    height: 120vh;
-    z-index: -5;
-    
-    
-    /* Places the background image behind the content */
-}
-
-
-.background-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures the image covers the entire container */
-    object-position: center;
-    
-    /* Centers the image within the container */
-}
-
-
-
-.sponsor-cover {
-
-    border: 0.4px solid white;
-    display: flex;
-
-        justify-content: center;
-        /* Center horizontally */
-        align-items: center;
-        /* Center vertically */
-        flex-direction: column;
-        /* Stack items vertically */
-        width: 80%;
-            height: 100%;
-        backdrop-filter: blur(30px);
-        border-radius: 5px;
-        margin-top: 10vh;
-        margin-bottom: 0vh;
-        padding-bottom: 5vh;
-}
-
-.sponsor-cover hr {
-    border: none;
-    /* Remove default border */
-    height: 2px;
-    /* Set the height of the hr */
-    background-color: #ffffff;
-    /* Set the color of the hr */
-}
-
-.section-title {
-    text-align: center;
-        font-size: 36px;
-        color: #000000;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-weight: 300;
-        margin-bottom: 20px;
-}
-
-.sponsor-category {
-    margin-bottom: 40px;
-}
-
-.category-title {
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: #bdbfc1;
-    text-transform: uppercase;
-}
-
-.sponsor-cards {
-    display: flex;
     justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
+    padding: 50px 0;
+    width: 100vw;
+    background-color: #ffffff;
+    position: relative;
+    /* To position the scroll buttons */
 }
 
-.card {
-    width: 200px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+.sponsors_cover h2 {
+    font-size: 38px;
+    text-transform: capitalize;
+    font-weight: 300;
+    color: #3C5E4B;
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    /* Take full width of the parent container */
+    overflow-x: auto;
+    /* Enable horizontal scrolling */
+    position: relative;
+}
+
+.cards-holder {
+    padding:20px 20px;
+    display: flex;
+    flex-shrink: 0;
+    gap: 30px;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+
+.sponsors_cover .cards .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 30px;
+    gap: 20px;
+    width: 350px;
+    height: 200px;
+    background-color: #ffffff;
+    border: 1px solid #e5f4f2;
+    box-shadow: 34.8541px 29.626px 48.34px rgba(51, 102, 255, 0.05);
+    border-radius: 20px;
+    scroll-snap-align: start;
     transition: transform 0.3s ease;
 }
 
-.card img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-}
-
-.card p {
-    margin: 10px 0;
-    font-size: 18px;
-    color: #333;
-}
-
-.card:hover {
+.sponsors_cover .cards .card:hover {
     transform: translateY(-10px);
 }
 
-.gold .card {
-    border-top: 5px solid gold;
+.sponsors_cover .cards .card img {
+    width: 100px;
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 100px;
 }
 
-.silver .card {
-    border-top: 5px solid silver;
+.sponsors_cover .cards .card .sponsor_name {
+    font-weight: 500;
+    font-size: 21px;
+    color: #111827;
+    text-align: center;
+    margin-top: 10px;
 }
 
-.standard .card {
-    border-top: 5px solid #cd7f32;
+/* Scrollbar styles */
+.sponsors_cover .cards::-webkit-scrollbar {
+    height: 2px;
+}
+
+
+/* Scroll buttons styling */
+.scroll-left,
+.scroll-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.scroll-left {
+    left: 20px;
+}
+
+.scroll-right {
+    right: 20px;
+}
+
+/* Optional: Hover effects for buttons */
+.scroll-left:hover,
+.scroll-right:hover {
+    background-color: #f5f5f5;
 }

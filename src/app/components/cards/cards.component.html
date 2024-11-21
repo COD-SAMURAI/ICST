@@ -1,0 +1,21 @@
+<section class="card_section">
+
+    <div class="card-container">
+        <div class="card" *ngFor="let card of cards">
+            <img [src]="card.iconPath" alt="{{ card.icon }} Icon" class="card-icon">
+            <div class="card-details">
+            <h5 class="card-head">{{ card.head }}</h5>
+            <p class="card-text">{{ card.text }}</p>
+            </div>
+        </div>
+    </div>
+
+    <app-countdown></app-countdown>
+
+<div class="hero_png">
+
+<img src="../../../assets/images/illustrations/hero2.png">
+
+</div>
+</section>
+

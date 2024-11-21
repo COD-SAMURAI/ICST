@@ -1,169 +1,55 @@
-body {
-    font-family: 'Arial', sans-serif;
-}
-
-.vision-mission-container {
-    position: relative;
-    /* Allows positioning of child elements */
-    overflow: hidden;
-    /* Ensures no overflow outside the container */
-    height: 130vh;
-    /* Set a height for the container */
-    color: #000000;
-    /* Text color */
-    padding-bottom: 2vh;
-    
-}
-
-.background-image {
-    position: absolute;
-    width: 100%;
-    /* Full width of the container */
-    height: 100%;
-    /* Full height of the container */
-    z-index: -5;
-    /* Places the background image behind the content */
-}
-
-.background-image img {
-    width: 120%;
-    /* Slightly wider for coverage */
-    height: 100%;
-    /* Full height */
-    object-fit: cover;
-    /* Ensure the image covers the container */
-    object-position: center;
-    /* Center the image */
-}
-
-.vision-mission {
+.vision {
     display: flex;
-    /* Flexbox layout */
-    justify-content: left;
-    /* Space between items */
-    margin: 2vh 0;
-    /* Space above and below */
-    position: relative;
-    /* Relative positioning for child elements */
-
-}
-hr {
-    border: none;
-    /* Remove default border */
-    height: 2px;
-    /* Set the height of the hr */
-    background-color: #000000;
-    /* Set the color of the hr */
+    flex-direction: row;
+    align-items:flex-start;
+    justify-content: space-evenly ;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.vision-mission .info-card {
-    width: 65%;
-    /* Card width */
-    margin: 0 30px;
-    /* Horizontal margins */
-    background-color: rgba(249, 249, 249, 0.64);
-    /* Semi-transparent background */
-    border-radius: 1rem;
-    /* Rounded corners */
-    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
-    /* Subtle shadow */
-    padding: 1vh;
-    /* Padding inside card */
+.mission {
+
+    display: flex;
+    flex-direction: row-reverse;
+    align-items:start;
+    justify-content: space-evenly;
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-.vision-mission .info-text h3 {
-    font-size: 2.25rem;
-    /* Heading size */
-    margin-bottom: 1rem;
-    /* Space below heading */
-    color: #000000;
-    /* Heading color */
+.vision-head,
+.mission-head {
+
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
     text-transform: uppercase;
-    /* Uppercase letters */
-    letter-spacing: 1px;
-    /* Space between letters */
-    font-weight: 300;
+    letter-spacing: 2px;
+
 }
 
-.vision-mission .info-text p,
-.vision-mission li {
-    font-size: 1.25rem;
-    /* Font size for paragraph and list items */
-    line-height: 1.8;
-    /* Line height for readability */
-    text-align: left;
-    /* Left align text */
-    letter-spacing: 1px;
-    font-weight: 300;
+.vision-content,
+.mission-content {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #ffffff;
+    text-align: justify;
+    margin-bottom: 20px;
+    max-width: 600px;
 }
 
-@media (max-width: 768px) {
-    .vision-mission-container {
-        margin-top: 10vh;
-        /* Margin from the top */
-        height: auto;
-        /* Auto height for mobile */
-        padding: 1rem;
-        /* Padding for the container */
-    }
-
-    .background-image {
-        top: 0;
-        /* Position at the top */
-        left: 0;
-        /* Position at the left */
-        position: fixed;
-        /* Fixed position for mobile */
-        width: 100vw;
-        /* Full viewport width */
-        height: 100vh;
-        /* Full viewport height */
-        z-index: -5;
-        /* Behind content */
-    }
-
-    .background-image img {
-        width: 100%;
-        /* Full width */
-        height: 100%;
-        /* Full height */
-        object-fit: cover;
-        /* Cover the container */
-    }
-
-    .vision-mission {
-        flex-direction: column;
-        /* Stack items vertically */
-        align-items: center;
-        /* Center align items */
-        margin: 2rem 0;
-        /* Reduced margins */
-    }
-
-    .vision-mission .info-card {
-        width: 90%;
-        /* Card width for mobile */
-        margin: 1rem 0;
-        /* Vertical margins */
-        padding: 0.5rem;
-        background-color: rgba(249, 249, 249, 0.559);
-        /* Reduced padding */
-        box-shadow: none;
-        /* Optional: remove shadow for mobile */
-    }
-
-    .vision-mission .info-text h3 {
-        font-size: 1.5rem;
-        /* Decrease font size */
-        margin-bottom: 1rem;
-        /* Reduce margin */
-    }
-
-    .vision-mission .info-text p,
-    .vision-mission li {
-        font-size: 1rem;
-        /* Decrease font size */
-        text-align: left;
-        /* Left align text */
-    }
+section img {
+    height:400px;
+    width:550px;
 }

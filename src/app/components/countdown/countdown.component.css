@@ -1,124 +1,43 @@
-.outercover{
-    display: flex;
+.cover{
+    display:flex;
     flex-direction: column;
     align-items: center;
-
-}
-
-.cover {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #cee5ddef;
-    padding: 0.5vh;
-    width:max-content;
-    border-radius: 3px;
-    border: 0.4px solid rgb(0, 0, 0);
-}
-
-
-.countdown-container {
     text-align: center;
 }
 
-.countdown-timer {
+.cover h2{
+    font-size: 35px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    color:#3C5E4B;
+    text-transform: capitalize;
+}
+
+.countdown-timer{
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    flex-direction: row;
+    align-items:center;
+    text-align:center;
+    gap: 3vw;
 }
 
-.countdown-box {
-    background-color: #cee5ddef;
-    border-radius: 5px;
-    border: 0.4px solid rgb(0, 0, 0);
-    padding: 20px;
-    color: rgb(0, 0, 0);
+.countdown-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
+    gap: 2vw;
 }
 
-
-h2{
-    padding:1vh;
-    color: rgb(0, 0, 0);
-    /* Make the text inside transparent */
-    /* Outline the text with a white border */
-    
-    margin:2px;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 1rem;
-    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
-            /* Stronger blur */
-            0 0 20px rgba(255, 255, 255, 0.6),
-            /* Medium blur */
-            0 0 30px rgba(255, 255, 255, 0.4);
-        /* Subtle blur */
-
+.countdown-value{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+    gap:1vw;
+    font-size: 32px;
 }
 
-.countdown-value {
-    font-size: 1.8rem;
-    display: block;
-    font-weight: 300;
-}
-
-.countdown-label {
-    font-size: 1.2rem;
-    font-weight: 300;
-}
-
-
-@media (max-width: 768px) {
-
-    .cover {
-            margin-top: 5px;
-            padding: 5px;
-            padding-bottom: 2.5px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-    .countdown-container {
-        padding: 0 5px;
-        
-    }
-
-    .countdown-timer {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-
-    }
-
-    .countdown-box {
-        backdrop-filter: blur(20px);
-        border: 1px solid rgb(0, 0, 0);
-        height:3vh;
-        width:5.5vw;
-        text-align: center;
-    }
-
-    .countdown-value {
-        font-size: 0.8rem;
-        text-align: center;
-        
-    }
-
-    .countdown-label {
-        font-size: 0.5rem;
-        text-align: center;
-
-
-    }
-    h2 {
-        text-align: center;
-        padding: 20px;
-        color: rgb(0, 0, 0);
-        /* Make the text inside transparent */
-        /* Outline the text with a white border */
-        margin: 2px;
-        font-size: 0.5rem;
-
-    }
+.countdown-label{
+    font-size:20px;
 }

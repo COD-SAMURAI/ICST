@@ -10,6 +10,28 @@
     /* Transparent background */
 }
 
+.background-image {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+
+    /* Places the background image behind the content */
+}
+
+.background-image img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover the entire container */
+    object-position: center;
+    /* Center the image */
+}
+
 /* Registration Section */
 .registration-section {
     margin-top: 10vh;
@@ -18,9 +40,8 @@
     backdrop-filter: blur(20px);
     border-radius: 12px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.36);
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.557);
     /* Slightly opaque white */
-    font-family: 'Arial', sans-serif;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -70,6 +91,8 @@
     /* Higher transparency on hover */
 }
 
+
+
 /* Additional Info Section */
 .additional-info,
 .important-dates {
@@ -79,8 +102,12 @@
     padding: 30px;
     backdrop-filter: blur(30px);
     border-radius: 8px;
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.557);
     /* Slightly opaque white */
+}
+
+.additional-info{
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.36);
 }
 
 .additional-title,
@@ -94,7 +121,21 @@
     font-weight: 300;
 }
 
+.account-details-title,
+.accommodation-title{
+    font-size: 28px;
+        margin-bottom: 10px;
+        color: #333;
+        /* Darker text color */
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 350;
+
+}
+
 .additional-text,
+.accommodation-list,
+.account-details-list,
 .important-dates-list li {
     font-size: 20px;
     color: #333;
@@ -102,6 +143,7 @@
     margin-bottom: 15px;
     font-weight: 300;
     letter-spacing: 1px;
+    line-height: 1.8;
 }
 
 /* Payment Link */
@@ -154,6 +196,10 @@
     letter-spacing: 1px;
 }
 
+.important-dates{
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.36);
+}
+
 /* Important Dates Section */
 .important-dates-list {
     list-style-type: none;
@@ -174,6 +220,198 @@
 }
 
 .important-dates-list strong {
-    color: #007BFF;
+    color: #000000;
     /* Color for highlighted dates */
+}
+
+.additional-info h3{
+    text-transform: uppercase;
+}
+@media (max-width: 768px) {
+    /* General Styles */
+        .registrationcover {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            background-color: rgba(240, 240, 240, 0.0);
+        }
+    
+        .background-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -5;
+        }
+    
+        .background-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    
+        /* Registration Section */
+        .registration-section {
+            margin-top: 1vh;
+            padding: 15px;
+            width: 90vw;
+            backdrop-filter: blur(20px);
+            border-radius: 10px;
+            box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+            background-color: rgba(255, 255, 255, 0.55);
+        }
+    
+        .section-title {
+            text-align: center;
+            font-size: 24px;
+            font-weight: 300;
+            color: #000;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+    
+        /* Registration Table */
+        .registration-table {
+            width: 100%;
+            border-spacing: 5px;
+            margin-top: 1vh;
+            font-size: 1rem;
+        }
+    
+        .registration-table th,
+        .registration-table td {
+            border: 3px solid rgba(221, 221, 221, 0.168);
+            border-radius: 5px;
+            padding: 10px;
+            text-align: left;
+        }
+    
+        .registration-table th {
+            background-color: rgba(244, 244, 244, 0.7);
+            font-weight: bold;
+        }
+    
+        .registration-table tr {
+            background-color: rgba(249, 249, 249, 0.6);
+        }
+    
+        .registration-table tr:hover {
+            background-color: rgba(241, 241, 241, 0.8);
+        }
+    
+        /* Additional Info Section */
+        .additional-info{
+            margin-top: 1vh;
+                padding: 15px;
+                width: 80vw;
+                backdrop-filter: blur(20px);
+                border-radius: 10px;
+                box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+                background-color: rgba(255, 255, 255, 0.55);
+        }
+
+        .important-dates {
+            width: 80vw;
+            padding: 20px;
+            backdrop-filter: blur(25px);
+            border-radius: 8px;
+            background-color: rgba(255, 255, 255, 0.55);
+            box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.3);
+        }
+    
+        .additional-title,
+        .important-dates-title {
+            font-size: 22px;
+            margin-bottom: 8px;
+            color: #333;
+            text-align: center;
+            text-transform: uppercase;
+            font-weight: 300;
+        }
+    
+        .additional-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #000000;
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+    
+        .additional-text,
+        .accommodation-list,
+        .account-details-list,
+        .important-dates-list li {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 12px;
+            font-weight: 300;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+    
+        /* Payment Link */
+        .payment-link {
+            display: inline-block;
+            margin: 15px;
+            padding: 8px 12px;
+            background-color: #23d004;
+            color: white;
+            font-weight: 300;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            text-align: center;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+    
+        .payment-link:hover {
+            background-color: #000;
+        }
+    
+        /* Instructions and Notes */
+        .instructions-title,
+        .important-notes-title {
+            font-size: 18px;
+            margin: 20px 0 8px;
+            color: #333;
+            font-weight: 300;
+        }
+    
+        .instructions-list,
+        .important-notes-list {
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+    
+        .instructions-list li,
+        .important-notes-list li {
+            margin-bottom: 10px;
+            font-size: 15px;
+            color: #333;
+            font-weight: 300;
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+        }
+    
+        /* Important Dates Section */
+        .important-dates-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .important-dates-list li {
+            margin-bottom: 8px;
+            font-size: 15px;
+            color: #555;
+        }
+    
+        .important-dates-list strong {
+            color: #000000;
+        }
 }

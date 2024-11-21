@@ -1,9 +1,38 @@
 /* Main contact us section styling */
+.contact-us-section{
+    margin-left: 10vw;
+    margin-right: 10vw;
+
+}
+
+.background-image {
+    position: fixed;
+    top: 0px;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -5;
+
+    /* Places the background image behind the content */
+}
+
+.background-image img {
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    object-fit: cover;
+    /* Cover the entire container */
+    object-position: center;
+    /* Center the image */
+}
+
+
 .contact-us {
-    background-color: #ffffff00;
+    background-color: #ffffffad;
     /* Light background color */
-    padding-left: 10vw;
-    padding-right: 10vw;
+    margin:2vw;
+    padding: 2vw;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -60,4 +89,34 @@
 /* Contact section styles */
 .contact-section {
     margin-bottom: 20px;
+}
+
+/* Responsive layout adjustments */
+@media (max-width: 768px) {
+
+    /* Reduce padding and margin for small screens */
+    .contact-us-section {
+        margin: 2vw;
+    }
+
+    .contact-us {
+        margin: 3vw;
+        padding: 4vw;
+    }
+
+    /* Adjust font sizes for headings */
+    .contact-us h2 {
+        font-size: 28px;
+        letter-spacing: 4px;
+    }
+
+    .contact-us h3 {
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    /* Reduce padding and font size for paragraphs */
+    .contact-us p {
+        font-size: 14px;
+    }
 }
